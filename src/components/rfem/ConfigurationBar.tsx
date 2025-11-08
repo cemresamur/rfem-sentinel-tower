@@ -37,25 +37,32 @@ export function ConfigurationBar({
   };
 
   return (
-    <Card className="p-4 border-b">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div className="control-panel rounded-lg p-6 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Load Case */}
-        <div>
-          <Label htmlFor="load-case">Load Case</Label>
+        <div className="control-section rounded-md">
+          <div className="control-label mb-3">
+            <span className="status-indicator"></span>
+            <span>Load Case</span>
+          </div>
           <Input
             id="load-case"
             value={loadCase}
             onChange={(e) => onLoadCaseChange(e.target.value)}
             placeholder="e.g., LIVE_LIFT"
+            className="control-input h-12 text-base font-mono"
           />
         </div>
 
         {/* Thresholds */}
-        <div>
-          <Label className="mb-2 block">Thresholds</Label>
+        <div className="control-section rounded-md">
+          <div className="control-label mb-3">
+            <span className="status-indicator"></span>
+            <span>Thresholds</span>
+          </div>
           <div className="grid grid-cols-3 gap-2">
             <div>
-              <Label htmlFor="util" className="text-xs text-muted-foreground">
+              <Label htmlFor="util" className="text-[10px] text-glow-primary/70 uppercase tracking-wider block mb-1">
                 Util %
               </Label>
               <Input
@@ -66,10 +73,11 @@ export function ConfigurationBar({
                 onChange={(e) =>
                   onThresholdsChange({ ...thresholds, utilization: parseFloat(e.target.value) })
                 }
+                className="control-input h-10 text-sm"
               />
             </div>
             <div>
-              <Label htmlFor="defl" className="text-xs text-muted-foreground">
+              <Label htmlFor="defl" className="text-[10px] text-glow-primary/70 uppercase tracking-wider block mb-1">
                 Defl mm
               </Label>
               <Input
@@ -79,10 +87,11 @@ export function ConfigurationBar({
                 onChange={(e) =>
                   onThresholdsChange({ ...thresholds, deflection_mm: parseFloat(e.target.value) })
                 }
+                className="control-input h-10 text-sm"
               />
             </div>
             <div>
-              <Label htmlFor="stress" className="text-xs text-muted-foreground">
+              <Label htmlFor="stress" className="text-[10px] text-glow-primary/70 uppercase tracking-wider block mb-1">
                 MPa
               </Label>
               <Input
@@ -92,21 +101,25 @@ export function ConfigurationBar({
                 onChange={(e) =>
                   onThresholdsChange({ ...thresholds, von_mises_mpa: parseFloat(e.target.value) })
                 }
+                className="control-input h-10 text-sm"
               />
             </div>
           </div>
         </div>
 
         {/* Member Loads */}
-        <div>
-          <div className="flex items-center justify-between mb-2">
-            <Label>Member Loads</Label>
-            <Button onClick={addLoadRow} variant="outline" size="sm">
+        <div className="control-section rounded-md">
+          <div className="flex items-center justify-between mb-3">
+            <div className="control-label">
+              <span className="status-indicator"></span>
+              <span>Member Loads</span>
+            </div>
+            <Button onClick={addLoadRow} variant="default" size="sm" className="h-7 text-xs">
               <Plus className="h-3 w-3 mr-1" />
               Add
             </Button>
           </div>
-          <div className="space-y-2 max-h-24 overflow-y-auto">
+          <div className="space-y-2 max-h-24 overflow-y-auto pr-1">
             {memberLoads.map((load, index) => (
               <div key={index} className="flex gap-2">
                 <Input
@@ -116,7 +129,7 @@ export function ConfigurationBar({
                   onChange={(e) =>
                     updateLoadRow(index, 'member_id', e.target.value ? parseInt(e.target.value) : null)
                   }
-                  className="flex-1"
+                  className="control-input flex-1 h-9 text-sm"
                 />
                 <Input
                   type="number"
@@ -125,21 +138,21 @@ export function ConfigurationBar({
                   onChange={(e) =>
                     updateLoadRow(index, 'fy', e.target.value ? parseFloat(e.target.value) : null)
                   }
-                  className="flex-1"
+                  className="control-input flex-1 h-9 text-sm"
                 />
                 <Button
                   onClick={() => removeLoadRow(index)}
                   variant="ghost"
                   size="sm"
-                  className="px-2"
+                  className="px-2 h-9 hover:bg-destructive/20 hover:text-destructive"
                 >
-                  <Trash2 className="h-4 w-4 text-destructive" />
+                  <Trash2 className="h-4 w-4" />
                 </Button>
               </div>
             ))}
           </div>
         </div>
       </div>
-    </Card>
+    </div>
   );
 }
