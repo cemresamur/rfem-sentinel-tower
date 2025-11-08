@@ -507,8 +507,8 @@ All colors MUST be HSL.
 
   .control-input {
     background: hsl(var(--navy) / 0.5);
-    border: 1px solid hsl(var(--glow-primary) / 0.3);
-    color: hsl(var(--glow-primary));
+    border: 2px solid hsl(var(--glow-primary) / 0.5);
+    color: hsl(0 0% 100%);
     font-family: 'Courier New', monospace;
     text-align: center;
     transition: all 0.3s ease;
@@ -516,7 +516,7 @@ All colors MUST be HSL.
   }
 
   .control-input::placeholder {
-    color: hsl(var(--glow-primary) / 0.4);
+    color: hsl(0 0% 80%);
   }
 
   .control-input:focus {
