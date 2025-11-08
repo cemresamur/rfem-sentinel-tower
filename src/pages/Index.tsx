@@ -165,31 +165,33 @@ const Index = () => {
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
-        <header className="border-b bg-card px-6 py-4 tech-panel relative">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold text-foreground tracking-wider">
-                <span className="text-primary glow-primary">RFEM</span> Risk Control Tower
-              </h1>
-              <p className="text-sm text-muted-foreground">
-                {selectedModel ? selectedModel.name : 'Select a model to begin'}
-              </p>
+        <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 tech-panel status-bar hud-corners">
+          <div className="flex h-16 items-center px-6 justify-between">
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-glow-primary shadow-[0_0_10px_hsl(var(--glow-primary))] animate-pulse"></div>
+                <div className="w-2 h-2 rounded-full bg-glow-primary shadow-[0_0_10px_hsl(var(--glow-primary))] animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+                <div className="w-2 h-2 rounded-full bg-glow-primary shadow-[0_0_10px_hsl(var(--glow-primary))] animate-pulse" style={{ animationDelay: '0.6s' }}></div>
+              </div>
+              <h1 className="text-xl font-bold hologram-text tracking-[0.2em]">◢ RFEM ANALYSIS PLATFORM ◣</h1>
             </div>
             <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2 hologram-border px-3 py-2 rounded-md">
+              <div className="flex items-center gap-2 px-3 py-1 rounded cut-corner border border-glow-primary/30 bg-navy/30">
+                <span className="text-xs text-glow-primary uppercase tracking-wider">System:</span>
+                <span className="text-xs font-bold text-white">ONLINE</span>
+                <div className="w-2 h-2 rounded-full bg-success shadow-[0_0_10px_hsl(var(--success))]"></div>
+              </div>
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded cut-corner border border-glow-primary/30 bg-navy/30">
                 <Switch
                   id="demo-mode"
                   checked={demoMode}
                   onCheckedChange={setDemoMode}
+                  className="data-[state=checked]:bg-glow-primary"
                 />
-                <Label htmlFor="demo-mode" className="text-sm">
+                <Label htmlFor="demo-mode" className="text-xs text-glow-primary uppercase tracking-wider">
                   Demo Mode
                 </Label>
               </div>
-              <Button variant="outline" size="sm">
-                <Settings className="h-4 w-4 mr-2" />
-                Settings
-              </Button>
             </div>
           </div>
         </header>

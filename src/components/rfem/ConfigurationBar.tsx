@@ -37,13 +37,13 @@ export function ConfigurationBar({
   };
 
   return (
-    <div className="control-panel rounded-lg p-6 mb-6">
+    <div className="control-panel rounded-lg p-6 mb-6 hud-corners tactical-grid">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Load Case */}
-        <div className="control-section rounded-md">
+        <div className="control-section rounded-md data-stream">
           <div className="control-label mb-3">
             <span className="status-indicator"></span>
-            <span>Load Case</span>
+            <span>◢ Load Case</span>
           </div>
           <Input
             id="load-case"
@@ -55,10 +55,10 @@ export function ConfigurationBar({
         </div>
 
         {/* Thresholds */}
-        <div className="control-section rounded-md">
+        <div className="control-section rounded-md data-stream">
           <div className="control-label mb-3">
             <span className="status-indicator"></span>
-            <span>Thresholds</span>
+            <span>◢ Thresholds</span>
           </div>
           <div className="grid grid-cols-3 gap-2">
             <div>
@@ -108,11 +108,11 @@ export function ConfigurationBar({
         </div>
 
         {/* Member Loads */}
-        <div className="control-section rounded-md">
+        <div className="control-section rounded-md data-stream">
           <div className="flex items-center justify-between mb-3">
             <div className="control-label">
               <span className="status-indicator"></span>
-              <span>Member Loads</span>
+              <span>◢ Member Loads</span>
             </div>
             <Button onClick={addLoadRow} variant="default" size="sm" className="h-7 text-xs">
               <Plus className="h-3 w-3 mr-1" />
