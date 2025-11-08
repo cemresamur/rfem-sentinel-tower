@@ -356,17 +356,82 @@ export const mockAnalysisResultsByModel: Record<string, AnalysisResult> = {
   'model-2': {
     status: 'succeeded',
     summary: {
-      max_util: 0.94,
-      max_defl_mm: 18,
-      exceed_count: 0,
+      max_util: 1.08,
+      max_defl_mm: 28,
+      exceed_count: 8,
     },
-    exceedances: [],
+    exceedances: [
+      {
+        element_id: 105,
+        type: 'utilization',
+        value: 1.08,
+        limit: 0.95,
+        location: 'Foundation Column F5',
+        recommendation: 'Upgrade to W14x145 section or add steel reinforcement',
+      },
+      {
+        element_id: 114,
+        type: 'utilization',
+        value: 1.02,
+        limit: 0.95,
+        location: 'Foundation Column F14',
+        recommendation: 'Redistribute load or strengthen connection',
+      },
+      {
+        element_id: 751,
+        type: 'utilization',
+        value: 1.05,
+        limit: 0.95,
+        location: 'Transfer Girder TG-1',
+        recommendation: 'Critical! Add intermediate support or upgrade to W36x230',
+      },
+      {
+        element_id: 753,
+        type: 'utilization',
+        value: 0.99,
+        limit: 0.95,
+        location: 'Transfer Girder TG-3',
+        recommendation: 'Monitor closely, consider load reduction',
+      },
+      {
+        element_id: 402,
+        type: 'deflection_mm',
+        value: 28,
+        limit: 25,
+        location: 'Floor Beam L1-B2 Midspan',
+        recommendation: 'Install camber or add intermediate column',
+      },
+      {
+        element_id: 411,
+        type: 'utilization',
+        value: 0.98,
+        limit: 0.95,
+        location: 'Floor Beam L1-B11',
+        recommendation: 'Reduce live load or upgrade section',
+      },
+      {
+        element_id: 741,
+        type: 'utilization',
+        value: 0.97,
+        limit: 0.95,
+        location: 'Outrigger Beam OB-1',
+        recommendation: 'Add stiffeners at connection points',
+      },
+      {
+        element_id: 222,
+        type: 'utilization',
+        value: 0.96,
+        limit: 0.95,
+        location: 'Core Column C2',
+        recommendation: 'Check connection details, monitor for lateral movement',
+      },
+    ],
     heatmap: [
       // Foundation columns (101-136)
       { element_id: 101, util: 0.82 }, { element_id: 102, util: 0.89 }, { element_id: 103, util: 0.76 }, { element_id: 104, util: 0.78 },
-      { element_id: 105, util: 0.94 }, { element_id: 106, util: 0.71 }, { element_id: 107, util: 0.73 }, { element_id: 108, util: 0.85 },
+      { element_id: 105, util: 1.08 }, { element_id: 106, util: 0.71 }, { element_id: 107, util: 0.73 }, { element_id: 108, util: 0.85 },
       { element_id: 109, util: 0.68 }, { element_id: 110, util: 0.77 }, { element_id: 111, util: 0.81 }, { element_id: 112, util: 0.74 },
-      { element_id: 113, util: 0.79 }, { element_id: 114, util: 0.86 }, { element_id: 115, util: 0.72 }, { element_id: 116, util: 0.75 },
+      { element_id: 113, util: 0.79 }, { element_id: 114, util: 1.02 }, { element_id: 115, util: 0.72 }, { element_id: 116, util: 0.75 },
       { element_id: 117, util: 0.81 }, { element_id: 118, util: 0.78 }, { element_id: 119, util: 0.76 }, { element_id: 120, util: 0.83 },
       { element_id: 121, util: 0.69 }, { element_id: 122, util: 0.74 }, { element_id: 123, util: 0.80 }, { element_id: 124, util: 0.77 },
       { element_id: 125, util: 0.84 }, { element_id: 126, util: 0.71 }, { element_id: 127, util: 0.76 }, { element_id: 128, util: 0.82 },
@@ -381,7 +446,7 @@ export const mockAnalysisResultsByModel: Record<string, AnalysisResult> = {
       { element_id: 217, util: 0.72 }, { element_id: 218, util: 0.68 }, { element_id: 219, util: 0.66 }, { element_id: 220, util: 0.70 },
       
       // Core columns (221-240)
-      { element_id: 221, util: 0.78 }, { element_id: 222, util: 0.81 }, { element_id: 223, util: 0.76 }, { element_id: 224, util: 0.79 },
+      { element_id: 221, util: 0.78 }, { element_id: 222, util: 0.96 }, { element_id: 223, util: 0.76 }, { element_id: 224, util: 0.79 },
       { element_id: 225, util: 0.74 }, { element_id: 226, util: 0.77 }, { element_id: 227, util: 0.73 }, { element_id: 228, util: 0.75 },
       { element_id: 229, util: 0.71 }, { element_id: 230, util: 0.74 }, { element_id: 231, util: 0.69 }, { element_id: 232, util: 0.72 },
       { element_id: 233, util: 0.68 }, { element_id: 234, util: 0.70 }, { element_id: 235, util: 0.66 }, { element_id: 236, util: 0.69 },
@@ -407,9 +472,9 @@ export const mockAnalysisResultsByModel: Record<string, AnalysisResult> = {
       { element_id: 391, util: 0.39 }, { element_id: 392, util: 0.42 }, { element_id: 393, util: 0.38 }, { element_id: 394, util: 0.41 },
       
       // Floor beams level 1 (401-418)
-      { element_id: 401, util: 0.85 }, { element_id: 402, util: 0.88 }, { element_id: 403, util: 0.79 }, { element_id: 404, util: 0.81 },
+      { element_id: 401, util: 0.85 }, { element_id: 402, util: 0.92 }, { element_id: 403, util: 0.79 }, { element_id: 404, util: 0.81 },
       { element_id: 405, util: 0.76 }, { element_id: 406, util: 0.83 }, { element_id: 407, util: 0.84 }, { element_id: 408, util: 0.80 },
-      { element_id: 409, util: 0.82 }, { element_id: 410, util: 0.77 }, { element_id: 411, util: 0.86 }, { element_id: 412, util: 0.81 },
+      { element_id: 409, util: 0.82 }, { element_id: 410, util: 0.77 }, { element_id: 411, util: 0.98 }, { element_id: 412, util: 0.81 },
       { element_id: 413, util: 0.78 }, { element_id: 414, util: 0.83 }, { element_id: 415, util: 0.79 }, { element_id: 416, util: 0.85 },
       { element_id: 417, util: 0.80 }, { element_id: 418, util: 0.82 },
       
@@ -438,10 +503,10 @@ export const mockAnalysisResultsByModel: Record<string, AnalysisResult> = {
       { element_id: 731, util: 0.43 }, { element_id: 732, util: 0.46 }, { element_id: 733, util: 0.44 }, { element_id: 734, util: 0.45 },
       
       // Outrigger beams (741-744)
-      { element_id: 741, util: 0.88 }, { element_id: 742, util: 0.86 }, { element_id: 743, util: 0.89 }, { element_id: 744, util: 0.87 },
+      { element_id: 741, util: 0.97 }, { element_id: 742, util: 0.86 }, { element_id: 743, util: 0.89 }, { element_id: 744, util: 0.87 },
       
       // Transfer girders (751-754)
-      { element_id: 751, util: 0.92 }, { element_id: 752, util: 0.90 }, { element_id: 753, util: 0.93 }, { element_id: 754, util: 0.91 },
+      { element_id: 751, util: 1.05 }, { element_id: 752, util: 0.90 }, { element_id: 753, util: 0.99 }, { element_id: 754, util: 0.91 },
       
       // Diagonal bracing floors 2-4 (801-813)
       { element_id: 801, util: 0.54 }, { element_id: 802, util: 0.51 }, { element_id: 803, util: 0.56 }, { element_id: 804, util: 0.52 },
