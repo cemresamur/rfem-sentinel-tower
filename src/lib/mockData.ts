@@ -5,6 +5,7 @@ export const mockModels: Model[] = [
   { id: 'model-2', name: 'Main Building Frame', updated_at: '2025-01-14T15:45:00Z' },
   { id: 'model-3', name: 'Bridge Deck Analysis', updated_at: '2025-01-13T09:20:00Z' },
   { id: 'model-4', name: 'Torre Communication Tower', updated_at: '2025-01-16T14:20:00Z' },
+  { id: 'model-5', name: 'Combined Cycle Power Plant', updated_at: '2025-01-17T11:30:00Z' },
 ];
 
 // Model-specific elements
@@ -189,6 +190,101 @@ export const mockElementsByModel: Record<string, Element[]> = {
     { id: 4301, label: 'Antenna Mount 1', type: 'BEAM' },
     { id: 4302, label: 'Antenna Mount 2', type: 'BEAM' },
     { id: 4303, label: 'Antenna Mount 3', type: 'BEAM' },
+  ],
+  'model-5': [
+    // Foundation
+    { id: 5001, label: 'Foundation A1', type: 'COLUMN' },
+    { id: 5002, label: 'Foundation A2', type: 'COLUMN' },
+    { id: 5003, label: 'Foundation A3', type: 'COLUMN' },
+    { id: 5004, label: 'Foundation A4', type: 'COLUMN' },
+    { id: 5005, label: 'Foundation A5', type: 'COLUMN' },
+    { id: 5006, label: 'Foundation A6', type: 'COLUMN' },
+    // Turbine hall
+    { id: 5101, label: 'Turbine Hall Col 1A', type: 'COLUMN' },
+    { id: 5102, label: 'Turbine Hall Col 1B', type: 'COLUMN' },
+    { id: 5103, label: 'Turbine Hall Col 1C', type: 'COLUMN' },
+    { id: 5104, label: 'Turbine Hall Col 1D', type: 'COLUMN' },
+    { id: 5105, label: 'Turbine Hall Col 1E', type: 'COLUMN' },
+    { id: 5106, label: 'Turbine Hall Col 1F', type: 'COLUMN' },
+    { id: 5113, label: 'Turbine Hall Col 2A', type: 'COLUMN' },
+    { id: 5114, label: 'Turbine Hall Col 2B', type: 'COLUMN' },
+    { id: 5115, label: 'Turbine Hall Col 2C', type: 'COLUMN' },
+    { id: 5116, label: 'Turbine Hall Col 2D', type: 'COLUMN' },
+    // Boiler structure
+    { id: 5201, label: 'Boiler Support 1A', type: 'COLUMN' },
+    { id: 5202, label: 'Boiler Support 1B', type: 'COLUMN' },
+    { id: 5203, label: 'Boiler Support 1C', type: 'COLUMN' },
+    { id: 5204, label: 'Boiler Support 2A', type: 'COLUMN' },
+    { id: 5205, label: 'Boiler Support 2B', type: 'COLUMN' },
+    { id: 5206, label: 'Boiler Support 2C', type: 'COLUMN' },
+    { id: 5207, label: 'Boiler Support 3A', type: 'COLUMN' },
+    { id: 5208, label: 'Boiler Support 3B', type: 'COLUMN' },
+    { id: 5209, label: 'Boiler Support 3C', type: 'COLUMN' },
+    // Cooling tower
+    { id: 5301, label: 'Cooling Tower Leg 1', type: 'COLUMN' },
+    { id: 5302, label: 'Cooling Tower Leg 2', type: 'COLUMN' },
+    { id: 5303, label: 'Cooling Tower Leg 3', type: 'COLUMN' },
+    { id: 5304, label: 'Cooling Tower Leg 4', type: 'COLUMN' },
+    // Chimney
+    { id: 5401, label: 'Chimney Stack L1', type: 'COLUMN' },
+    { id: 5402, label: 'Chimney Stack L2', type: 'COLUMN' },
+    { id: 5403, label: 'Chimney Stack L3', type: 'COLUMN' },
+    { id: 5404, label: 'Chimney Stack L4', type: 'COLUMN' },
+    { id: 5405, label: 'Chimney Stack L5', type: 'COLUMN' },
+    // Main beams
+    { id: 5501, label: 'Roof Beam TB-1', type: 'BEAM' },
+    { id: 5502, label: 'Roof Beam TB-2', type: 'BEAM' },
+    { id: 5503, label: 'Roof Beam TB-3', type: 'BEAM' },
+    { id: 5504, label: 'Roof Beam TB-4', type: 'BEAM' },
+    { id: 5505, label: 'Roof Beam TB-5', type: 'BEAM' },
+    { id: 5506, label: 'Roof Beam TL-1', type: 'BEAM' },
+    { id: 5507, label: 'Roof Beam TL-2', type: 'BEAM' },
+    { id: 5508, label: 'Roof Beam TL-3', type: 'BEAM' },
+    // Floor beams
+    { id: 5601, label: 'Floor Beam FB-1', type: 'BEAM' },
+    { id: 5602, label: 'Floor Beam FB-2', type: 'BEAM' },
+    { id: 5603, label: 'Floor Beam FB-3', type: 'BEAM' },
+    { id: 5604, label: 'Floor Beam FB-4', type: 'BEAM' },
+    { id: 5605, label: 'Floor Beam FB-5', type: 'BEAM' },
+    // Pipe racks
+    { id: 5701, label: 'Pipe Rack PR-1', type: 'BEAM' },
+    { id: 5702, label: 'Pipe Rack PR-2', type: 'BEAM' },
+    { id: 5703, label: 'Pipe Rack PR-3', type: 'BEAM' },
+    { id: 5704, label: 'Pipe Rack PR-4', type: 'BEAM' },
+    { id: 5705, label: 'Pipe Rack PR-5', type: 'BEAM' },
+    // Equipment platforms
+    { id: 5801, label: 'Platform Beam EP-1', type: 'BEAM' },
+    { id: 5802, label: 'Platform Beam EP-2', type: 'BEAM' },
+    { id: 5803, label: 'Platform Beam EP-3', type: 'BEAM' },
+    { id: 5804, label: 'Platform Beam EP-4', type: 'BEAM' },
+    // Equipment supports
+    { id: 5901, label: 'Turbine Support TS-1', type: 'BEAM' },
+    { id: 5902, label: 'Turbine Support TS-2', type: 'BEAM' },
+    { id: 5903, label: 'Generator Support GS-1', type: 'BEAM' },
+    { id: 5904, label: 'Generator Support GS-2', type: 'BEAM' },
+    { id: 5905, label: 'Condenser Support CS-1', type: 'BEAM' },
+    // Bracing
+    { id: 6001, label: 'Diagonal Brace DB-1', type: 'TRUSS' },
+    { id: 6002, label: 'Diagonal Brace DB-2', type: 'TRUSS' },
+    { id: 6003, label: 'Diagonal Brace DB-3', type: 'TRUSS' },
+    { id: 6004, label: 'Diagonal Brace DB-4', type: 'TRUSS' },
+    { id: 6005, label: 'Diagonal Brace DB-5', type: 'TRUSS' },
+    { id: 6101, label: 'Boiler Brace BB-1', type: 'TRUSS' },
+    { id: 6102, label: 'Boiler Brace BB-2', type: 'TRUSS' },
+    { id: 6103, label: 'Boiler Brace BB-3', type: 'TRUSS' },
+    { id: 6104, label: 'Boiler Brace BB-4', type: 'TRUSS' },
+    { id: 6201, label: 'Lateral Brace LB-1', type: 'TRUSS' },
+    { id: 6202, label: 'Lateral Brace LB-2', type: 'TRUSS' },
+    { id: 6203, label: 'Lateral Brace LB-3', type: 'TRUSS' },
+    { id: 6204, label: 'Lateral Brace LB-4', type: 'TRUSS' },
+    { id: 6301, label: 'Cross Brace CB-1', type: 'TRUSS' },
+    { id: 6302, label: 'Cross Brace CB-2', type: 'TRUSS' },
+    { id: 6303, label: 'Cross Brace CB-3', type: 'TRUSS' },
+    { id: 6304, label: 'Cross Brace CB-4', type: 'TRUSS' },
+    { id: 6401, label: 'Chimney Ring CR-1', type: 'TRUSS' },
+    { id: 6402, label: 'Chimney Ring CR-2', type: 'TRUSS' },
+    { id: 6403, label: 'Chimney Ring CR-3', type: 'TRUSS' },
+    { id: 6404, label: 'Chimney Ring CR-4', type: 'TRUSS' },
   ],
 };
 
@@ -524,6 +620,126 @@ export const mockAnalysisResultsByModel: Record<string, AnalysisResult> = {
       { element_id: 4303, util: 0.56 },
     ],
     report_url: 'https://rfem-backend.example.com/reports/torre-tower.pdf',
+  },
+  'model-5': {
+    status: 'succeeded',
+    summary: {
+      max_util: 0.97,
+      max_defl_mm: 28,
+      exceed_count: 4,
+    },
+    exceedances: [
+      {
+        element_id: 5401,
+        type: 'utilization',
+        value: 0.97,
+        limit: 0.95,
+        location: 'Chimney Base Section',
+        recommendation: 'Inspect foundation settlement and reinforce base if needed',
+      },
+      {
+        element_id: 5901,
+        type: 'deflection_mm',
+        value: 28,
+        limit: 20,
+        location: 'Main Turbine Support',
+        recommendation: 'Add intermediate support beam to reduce span deflection',
+      },
+      {
+        element_id: 5201,
+        type: 'utilization',
+        value: 0.96,
+        limit: 0.95,
+        location: 'Boiler Base Column',
+        recommendation: 'Monitor thermal expansion effects during operation',
+      },
+      {
+        element_id: 5501,
+        type: 'utilization',
+        value: 0.96,
+        limit: 0.95,
+        location: 'Main Roof Truss',
+        recommendation: 'Verify crane loads are within design limits',
+      },
+    ],
+    heatmap: [
+      // Foundation piers (5001-5036)
+      { element_id: 5001, util: 0.88 }, { element_id: 5002, util: 0.91 }, { element_id: 5003, util: 0.86 }, { element_id: 5004, util: 0.89 },
+      { element_id: 5005, util: 0.93 }, { element_id: 5006, util: 0.87 }, { element_id: 5007, util: 0.90 }, { element_id: 5008, util: 0.85 },
+      { element_id: 5009, util: 0.88 }, { element_id: 5010, util: 0.92 }, { element_id: 5011, util: 0.86 }, { element_id: 5012, util: 0.89 },
+      { element_id: 5013, util: 0.84 }, { element_id: 5014, util: 0.87 }, { element_id: 5015, util: 0.91 }, { element_id: 5016, util: 0.85 },
+      { element_id: 5017, util: 0.88 }, { element_id: 5018, util: 0.90 }, { element_id: 5019, util: 0.83 }, { element_id: 5020, util: 0.86 },
+      { element_id: 5021, util: 0.89 }, { element_id: 5022, util: 0.84 }, { element_id: 5023, util: 0.87 }, { element_id: 5024, util: 0.91 },
+      { element_id: 5025, util: 0.82 }, { element_id: 5026, util: 0.85 }, { element_id: 5027, util: 0.88 }, { element_id: 5028, util: 0.83 },
+      { element_id: 5029, util: 0.86 }, { element_id: 5030, util: 0.89 }, { element_id: 5031, util: 0.81 }, { element_id: 5032, util: 0.84 },
+      { element_id: 5033, util: 0.87 }, { element_id: 5034, util: 0.82 }, { element_id: 5035, util: 0.85 }, { element_id: 5036, util: 0.88 },
+      
+      // Turbine hall columns level 1 (5101-5112)
+      { element_id: 5101, util: 0.82 }, { element_id: 5102, util: 0.85 }, { element_id: 5103, util: 0.79 }, { element_id: 5104, util: 0.83 },
+      { element_id: 5105, util: 0.87 }, { element_id: 5106, util: 0.81 }, { element_id: 5107, util: 0.84 }, { element_id: 5108, util: 0.78 },
+      { element_id: 5109, util: 0.82 }, { element_id: 5110, util: 0.86 }, { element_id: 5111, util: 0.80 }, { element_id: 5112, util: 0.83 },
+      
+      // Turbine hall columns level 2 (5113-5124)
+      { element_id: 5113, util: 0.76 }, { element_id: 5114, util: 0.79 }, { element_id: 5115, util: 0.73 }, { element_id: 5116, util: 0.77 },
+      { element_id: 5117, util: 0.81 }, { element_id: 5118, util: 0.75 }, { element_id: 5119, util: 0.78 }, { element_id: 5120, util: 0.72 },
+      { element_id: 5121, util: 0.76 }, { element_id: 5122, util: 0.80 }, { element_id: 5123, util: 0.74 }, { element_id: 5124, util: 0.77 },
+      
+      // Boiler structure columns (5201-5212)
+      { element_id: 5201, util: 0.96 }, { element_id: 5202, util: 0.93 }, { element_id: 5203, util: 0.91 }, { element_id: 5204, util: 0.94 },
+      { element_id: 5205, util: 0.92 }, { element_id: 5206, util: 0.90 }, { element_id: 5207, util: 0.88 }, { element_id: 5208, util: 0.85 },
+      { element_id: 5209, util: 0.87 }, { element_id: 5210, util: 0.89 }, { element_id: 5211, util: 0.84 }, { element_id: 5212, util: 0.86 },
+      
+      // Cooling tower support (5301-5308)
+      { element_id: 5301, util: 0.74 }, { element_id: 5302, util: 0.77 }, { element_id: 5303, util: 0.71 }, { element_id: 5304, util: 0.75 },
+      { element_id: 5305, util: 0.68 }, { element_id: 5306, util: 0.71 }, { element_id: 5307, util: 0.65 }, { element_id: 5308, util: 0.69 },
+      
+      // Chimney stack (5401-5407)
+      { element_id: 5401, util: 0.97 }, { element_id: 5402, util: 0.91 }, { element_id: 5403, util: 0.85 }, { element_id: 5404, util: 0.79 },
+      { element_id: 5405, util: 0.73 }, { element_id: 5406, util: 0.67 }, { element_id: 5407, util: 0.61 },
+      
+      // Main turbine hall roof beams (5501-5511)
+      { element_id: 5501, util: 0.96 }, { element_id: 5502, util: 0.93 }, { element_id: 5503, util: 0.90 }, { element_id: 5504, util: 0.94 },
+      { element_id: 5505, util: 0.91 }, { element_id: 5506, util: 0.88 }, { element_id: 5507, util: 0.92 }, { element_id: 5508, util: 0.89 },
+      { element_id: 5509, util: 0.87 }, { element_id: 5510, util: 0.90 }, { element_id: 5511, util: 0.86 },
+      
+      // Floor level beams (5601-5608)
+      { element_id: 5601, util: 0.84 }, { element_id: 5602, util: 0.87 }, { element_id: 5603, util: 0.81 }, { element_id: 5604, util: 0.85 },
+      { element_id: 5605, util: 0.89 }, { element_id: 5606, util: 0.83 }, { element_id: 5607, util: 0.86 }, { element_id: 5608, util: 0.82 },
+      
+      // Pipe rack beams (5701-5706)
+      { element_id: 5701, util: 0.72 }, { element_id: 5702, util: 0.75 }, { element_id: 5703, util: 0.69 }, { element_id: 5704, util: 0.73 },
+      { element_id: 5705, util: 0.71 }, { element_id: 5706, util: 0.68 },
+      
+      // Equipment platform supports (5801-5807)
+      { element_id: 5801, util: 0.78 }, { element_id: 5802, util: 0.81 }, { element_id: 5803, util: 0.75 }, { element_id: 5804, util: 0.79 },
+      { element_id: 5805, util: 0.77 }, { element_id: 5806, util: 0.74 }, { element_id: 5807, util: 0.76 },
+      
+      // Heavy equipment support beams (5901-5905)
+      { element_id: 5901, util: 0.95 }, { element_id: 5902, util: 0.92 }, { element_id: 5903, util: 0.94 }, { element_id: 5904, util: 0.91 },
+      { element_id: 5905, util: 0.93 },
+      
+      // Diagonal bracing - turbine hall (6001-6009)
+      { element_id: 6001, util: 0.67 }, { element_id: 6002, util: 0.70 }, { element_id: 6003, util: 0.64 }, { element_id: 6004, util: 0.68 },
+      { element_id: 6005, util: 0.72 }, { element_id: 6006, util: 0.66 }, { element_id: 6007, util: 0.69 }, { element_id: 6008, util: 0.65 },
+      { element_id: 6009, util: 0.71 },
+      
+      // Diagonal bracing - boiler (6101-6106)
+      { element_id: 6101, util: 0.80 }, { element_id: 6102, util: 0.83 }, { element_id: 6103, util: 0.77 }, { element_id: 6104, util: 0.81 },
+      { element_id: 6105, util: 0.79 }, { element_id: 6106, util: 0.78 },
+      
+      // Lateral wind bracing (6201-6205)
+      { element_id: 6201, util: 0.58 }, { element_id: 6202, util: 0.61 }, { element_id: 6203, util: 0.55 }, { element_id: 6204, util: 0.59 },
+      { element_id: 6205, util: 0.63 },
+      
+      // Cross bracing - equipment platforms (6301-6307)
+      { element_id: 6301, util: 0.62 }, { element_id: 6302, util: 0.65 }, { element_id: 6303, util: 0.59 }, { element_id: 6304, util: 0.63 },
+      { element_id: 6305, util: 0.61 }, { element_id: 6306, util: 0.58 }, { element_id: 6307, util: 0.64 },
+      
+      // Chimney support rings (6401-6408)
+      { element_id: 6401, util: 0.85 }, { element_id: 6402, util: 0.88 }, { element_id: 6403, util: 0.79 }, { element_id: 6404, util: 0.82 },
+      { element_id: 6405, util: 0.73 }, { element_id: 6406, util: 0.76 }, { element_id: 6407, util: 0.67 }, { element_id: 6408, util: 0.70 },
+    ],
+    report_url: 'https://rfem-backend.example.com/reports/power-plant.pdf',
   },
 };
 

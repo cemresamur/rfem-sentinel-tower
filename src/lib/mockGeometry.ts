@@ -704,12 +704,208 @@ export const torreTowerGeometry = [
   { id: 4303, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 55, 0] as [number, number, number], rotation: [0, 0, -Math.PI / 3] as [number, number, number], scale: [0.8, 0.8, 1.6] as [number, number, number] } },
 ];
 
+// ==================== MODEL 5: ENERGY CENTRAL / POWER PLANT ====================
+// Ultra-complex combined cycle power plant with turbine halls, boiler, cooling tower, and chimney
+export const powerPlantGeometry = [
+  // ===== FOUNDATION PIERS (Massive 6x6 grid) =====
+  { id: 5001, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-20, 2, -20] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5002, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-12, 2, -20] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5003, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-4, 2, -20] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5004, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [4, 2, -20] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5005, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [12, 2, -20] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5006, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [20, 2, -20] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5007, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-20, 2, -12] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5008, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-12, 2, -12] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5009, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-4, 2, -12] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5010, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [4, 2, -12] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5011, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [12, 2, -12] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5012, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [20, 2, -12] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5013, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-20, 2, -4] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5014, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-12, 2, -4] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5015, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-4, 2, -4] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5016, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [4, 2, -4] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5017, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [12, 2, -4] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5018, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [20, 2, -4] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5019, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-20, 2, 4] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5020, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-12, 2, 4] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5021, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-4, 2, 4] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5022, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [4, 2, 4] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5023, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [12, 2, 4] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5024, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [20, 2, 4] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5025, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-20, 2, 12] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5026, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-12, 2, 12] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5027, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-4, 2, 12] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5028, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [4, 2, 12] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5029, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [12, 2, 12] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5030, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [20, 2, 12] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5031, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-20, 2, 20] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5032, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-12, 2, 20] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5033, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-4, 2, 20] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5034, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [4, 2, 20] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5035, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [12, 2, 20] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+  { id: 5036, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [20, 2, 20] as [number, number, number], scale: [2, 4, 2] as [number, number, number] } },
+
+  // ===== TURBINE HALL COLUMNS - LEVEL 1 (Ground + 8m) =====
+  { id: 5101, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-20, 8, -16] as [number, number, number], scale: [1.6, 4, 1.6] as [number, number, number] } },
+  { id: 5102, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-12, 8, -16] as [number, number, number], scale: [1.6, 4, 1.6] as [number, number, number] } },
+  { id: 5103, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-4, 8, -16] as [number, number, number], scale: [1.6, 4, 1.6] as [number, number, number] } },
+  { id: 5104, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [4, 8, -16] as [number, number, number], scale: [1.6, 4, 1.6] as [number, number, number] } },
+  { id: 5105, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [12, 8, -16] as [number, number, number], scale: [1.6, 4, 1.6] as [number, number, number] } },
+  { id: 5106, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [20, 8, -16] as [number, number, number], scale: [1.6, 4, 1.6] as [number, number, number] } },
+  { id: 5107, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-20, 8, 0] as [number, number, number], scale: [1.6, 4, 1.6] as [number, number, number] } },
+  { id: 5108, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-12, 8, 0] as [number, number, number], scale: [1.6, 4, 1.6] as [number, number, number] } },
+  { id: 5109, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-4, 8, 0] as [number, number, number], scale: [1.6, 4, 1.6] as [number, number, number] } },
+  { id: 5110, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [4, 8, 0] as [number, number, number], scale: [1.6, 4, 1.6] as [number, number, number] } },
+  { id: 5111, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [12, 8, 0] as [number, number, number], scale: [1.6, 4, 1.6] as [number, number, number] } },
+  { id: 5112, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [20, 8, 0] as [number, number, number], scale: [1.6, 4, 1.6] as [number, number, number] } },
+
+  // ===== TURBINE HALL COLUMNS - LEVEL 2 (16m) =====
+  { id: 5113, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-20, 14, -16] as [number, number, number], scale: [1.5, 4, 1.5] as [number, number, number] } },
+  { id: 5114, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-12, 14, -16] as [number, number, number], scale: [1.5, 4, 1.5] as [number, number, number] } },
+  { id: 5115, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-4, 14, -16] as [number, number, number], scale: [1.5, 4, 1.5] as [number, number, number] } },
+  { id: 5116, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [4, 14, -16] as [number, number, number], scale: [1.5, 4, 1.5] as [number, number, number] } },
+  { id: 5117, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [12, 14, -16] as [number, number, number], scale: [1.5, 4, 1.5] as [number, number, number] } },
+  { id: 5118, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [20, 14, -16] as [number, number, number], scale: [1.5, 4, 1.5] as [number, number, number] } },
+  { id: 5119, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-20, 14, 0] as [number, number, number], scale: [1.5, 4, 1.5] as [number, number, number] } },
+  { id: 5120, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-12, 14, 0] as [number, number, number], scale: [1.5, 4, 1.5] as [number, number, number] } },
+  { id: 5121, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-4, 14, 0] as [number, number, number], scale: [1.5, 4, 1.5] as [number, number, number] } },
+  { id: 5122, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [4, 14, 0] as [number, number, number], scale: [1.5, 4, 1.5] as [number, number, number] } },
+  { id: 5123, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [12, 14, 0] as [number, number, number], scale: [1.5, 4, 1.5] as [number, number, number] } },
+  { id: 5124, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [20, 14, 0] as [number, number, number], scale: [1.5, 4, 1.5] as [number, number, number] } },
+
+  // ===== BOILER STRUCTURE COLUMNS (Tall - 40m) =====
+  { id: 5201, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-8, 12, 10] as [number, number, number], scale: [1.4, 8, 1.4] as [number, number, number] } },
+  { id: 5202, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [0, 12, 10] as [number, number, number], scale: [1.4, 8, 1.4] as [number, number, number] } },
+  { id: 5203, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [8, 12, 10] as [number, number, number], scale: [1.4, 8, 1.4] as [number, number, number] } },
+  { id: 5204, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-8, 12, 18] as [number, number, number], scale: [1.4, 8, 1.4] as [number, number, number] } },
+  { id: 5205, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [0, 12, 18] as [number, number, number], scale: [1.4, 8, 1.4] as [number, number, number] } },
+  { id: 5206, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [8, 12, 18] as [number, number, number], scale: [1.4, 8, 1.4] as [number, number, number] } },
+  { id: 5207, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-8, 24, 10] as [number, number, number], scale: [1.3, 8, 1.3] as [number, number, number] } },
+  { id: 5208, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [0, 24, 10] as [number, number, number], scale: [1.3, 8, 1.3] as [number, number, number] } },
+  { id: 5209, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [8, 24, 10] as [number, number, number], scale: [1.3, 8, 1.3] as [number, number, number] } },
+  { id: 5210, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-8, 24, 18] as [number, number, number], scale: [1.3, 8, 1.3] as [number, number, number] } },
+  { id: 5211, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [0, 24, 18] as [number, number, number], scale: [1.3, 8, 1.3] as [number, number, number] } },
+  { id: 5212, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [8, 24, 18] as [number, number, number], scale: [1.3, 8, 1.3] as [number, number, number] } },
+
+  // ===== CHIMNEY STACK (90m tall) =====
+  { id: 5401, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [16, 10, 14] as [number, number, number], scale: [2, 10, 2] as [number, number, number] } },
+  { id: 5402, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [16, 22, 14] as [number, number, number], scale: [1.9, 10, 1.9] as [number, number, number] } },
+  { id: 5403, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [16, 34, 14] as [number, number, number], scale: [1.8, 10, 1.8] as [number, number, number] } },
+  { id: 5404, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [16, 46, 14] as [number, number, number], scale: [1.7, 10, 1.7] as [number, number, number] } },
+  { id: 5405, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [16, 58, 14] as [number, number, number], scale: [1.6, 10, 1.6] as [number, number, number] } },
+  { id: 5406, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [16, 70, 14] as [number, number, number], scale: [1.5, 10, 1.5] as [number, number, number] } },
+  { id: 5407, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [16, 82, 14] as [number, number, number], scale: [1.4, 10, 1.4] as [number, number, number] } },
+
+  // ===== COOLING TOWER SUPPORT STRUCTURE =====
+  { id: 5301, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-18, 8, -8] as [number, number, number], scale: [1.2, 4, 1.2] as [number, number, number] } },
+  { id: 5302, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-14, 8, -8] as [number, number, number], scale: [1.2, 4, 1.2] as [number, number, number] } },
+  { id: 5303, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-18, 8, -12] as [number, number, number], scale: [1.2, 4, 1.2] as [number, number, number] } },
+  { id: 5304, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-14, 8, -12] as [number, number, number], scale: [1.2, 4, 1.2] as [number, number, number] } },
+  { id: 5305, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-18, 14, -8] as [number, number, number], scale: [1.1, 4, 1.1] as [number, number, number] } },
+  { id: 5306, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-14, 14, -8] as [number, number, number], scale: [1.1, 4, 1.1] as [number, number, number] } },
+  { id: 5307, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-18, 14, -12] as [number, number, number], scale: [1.1, 4, 1.1] as [number, number, number] } },
+  { id: 5308, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-14, 14, -12] as [number, number, number], scale: [1.1, 4, 1.1] as [number, number, number] } },
+
+  // ===== MAIN TURBINE HALL ROOF BEAMS =====
+  { id: 5501, type: 'BEAM', geometry: { type: 'beam' as const, position: [-16, 18, -16] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.5, 1.5, 1.6] as [number, number, number] } },
+  { id: 5502, type: 'BEAM', geometry: { type: 'beam' as const, position: [-8, 18, -16] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.5, 1.5, 1.6] as [number, number, number] } },
+  { id: 5503, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 18, -16] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.5, 1.5, 1.6] as [number, number, number] } },
+  { id: 5504, type: 'BEAM', geometry: { type: 'beam' as const, position: [8, 18, -16] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.5, 1.5, 1.6] as [number, number, number] } },
+  { id: 5505, type: 'BEAM', geometry: { type: 'beam' as const, position: [16, 18, -16] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.5, 1.5, 1.6] as [number, number, number] } },
+  { id: 5506, type: 'BEAM', geometry: { type: 'beam' as const, position: [-20, 18, -8] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.5, 1.5, 1.6] as [number, number, number] } },
+  { id: 5507, type: 'BEAM', geometry: { type: 'beam' as const, position: [-12, 18, -8] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.5, 1.5, 1.6] as [number, number, number] } },
+  { id: 5508, type: 'BEAM', geometry: { type: 'beam' as const, position: [-4, 18, -8] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.5, 1.5, 1.6] as [number, number, number] } },
+  { id: 5509, type: 'BEAM', geometry: { type: 'beam' as const, position: [4, 18, -8] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.5, 1.5, 1.6] as [number, number, number] } },
+  { id: 5510, type: 'BEAM', geometry: { type: 'beam' as const, position: [12, 18, -8] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.5, 1.5, 1.6] as [number, number, number] } },
+  { id: 5511, type: 'BEAM', geometry: { type: 'beam' as const, position: [20, 18, -8] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.5, 1.5, 1.6] as [number, number, number] } },
+
+  // ===== FLOOR LEVEL BEAMS (Multiple Levels) =====
+  { id: 5601, type: 'BEAM', geometry: { type: 'beam' as const, position: [-16, 10, -16] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.2, 1.2, 1.6] as [number, number, number] } },
+  { id: 5602, type: 'BEAM', geometry: { type: 'beam' as const, position: [-8, 10, -16] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.2, 1.2, 1.6] as [number, number, number] } },
+  { id: 5603, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 10, -16] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.2, 1.2, 1.6] as [number, number, number] } },
+  { id: 5604, type: 'BEAM', geometry: { type: 'beam' as const, position: [8, 10, -16] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.2, 1.2, 1.6] as [number, number, number] } },
+  { id: 5605, type: 'BEAM', geometry: { type: 'beam' as const, position: [16, 10, -16] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.2, 1.2, 1.6] as [number, number, number] } },
+  { id: 5606, type: 'BEAM', geometry: { type: 'beam' as const, position: [-20, 10, -12] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.2, 1.2, 0.8] as [number, number, number] } },
+  { id: 5607, type: 'BEAM', geometry: { type: 'beam' as const, position: [-20, 10, -4] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.2, 1.2, 0.8] as [number, number, number] } },
+  { id: 5608, type: 'BEAM', geometry: { type: 'beam' as const, position: [-20, 10, 4] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.2, 1.2, 0.8] as [number, number, number] } },
+
+  // ===== PIPE RACK BEAMS (Elevated utility corridors) =====
+  { id: 5701, type: 'BEAM', geometry: { type: 'beam' as const, position: [-18, 12, 6] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 3.2] as [number, number, number] } },
+  { id: 5702, type: 'BEAM', geometry: { type: 'beam' as const, position: [-10, 12, 6] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 3.2] as [number, number, number] } },
+  { id: 5703, type: 'BEAM', geometry: { type: 'beam' as const, position: [-2, 12, 6] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 3.2] as [number, number, number] } },
+  { id: 5704, type: 'BEAM', geometry: { type: 'beam' as const, position: [6, 12, 6] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 3.2] as [number, number, number] } },
+  { id: 5705, type: 'BEAM', geometry: { type: 'beam' as const, position: [-20, 12, 8] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 0.8] as [number, number, number] } },
+  { id: 5706, type: 'BEAM', geometry: { type: 'beam' as const, position: [-20, 12, 4] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 0.8] as [number, number, number] } },
+
+  // ===== EQUIPMENT PLATFORM SUPPORTS =====
+  { id: 5801, type: 'BEAM', geometry: { type: 'beam' as const, position: [-6, 20, 12] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1, 1, 1.6] as [number, number, number] } },
+  { id: 5802, type: 'BEAM', geometry: { type: 'beam' as const, position: [-2, 20, 12] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1, 1, 1.6] as [number, number, number] } },
+  { id: 5803, type: 'BEAM', geometry: { type: 'beam' as const, position: [2, 20, 12] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1, 1, 1.6] as [number, number, number] } },
+  { id: 5804, type: 'BEAM', geometry: { type: 'beam' as const, position: [6, 20, 12] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1, 1, 1.6] as [number, number, number] } },
+  { id: 5805, type: 'BEAM', geometry: { type: 'beam' as const, position: [-8, 20, 14] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1, 1, 0.8] as [number, number, number] } },
+  { id: 5806, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 20, 14] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1, 1, 0.8] as [number, number, number] } },
+  { id: 5807, type: 'BEAM', geometry: { type: 'beam' as const, position: [8, 20, 14] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1, 1, 0.8] as [number, number, number] } },
+
+  // ===== HEAVY EQUIPMENT SUPPORT BEAMS =====
+  { id: 5901, type: 'BEAM', geometry: { type: 'beam' as const, position: [-16, 12, -8] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.4, 1.4, 1.6] as [number, number, number] } },
+  { id: 5902, type: 'BEAM', geometry: { type: 'beam' as const, position: [-8, 12, -8] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.4, 1.4, 1.6] as [number, number, number] } },
+  { id: 5903, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 12, -8] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.4, 1.4, 1.6] as [number, number, number] } },
+  { id: 5904, type: 'BEAM', geometry: { type: 'beam' as const, position: [8, 12, -8] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.4, 1.4, 1.6] as [number, number, number] } },
+  { id: 5905, type: 'BEAM', geometry: { type: 'beam' as const, position: [16, 12, -8] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.4, 1.4, 1.6] as [number, number, number] } },
+
+  // ===== DIAGONAL BRACING - TURBINE HALL =====
+  { id: 6001, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-16, 11, -16] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.8, 0.8, 2] as [number, number, number] } },
+  { id: 6002, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-8, 11, -16] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.8, 0.8, 2] as [number, number, number] } },
+  { id: 6003, type: 'TRUSS', geometry: { type: 'beam' as const, position: [0, 11, -16] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.8, 0.8, 2] as [number, number, number] } },
+  { id: 6004, type: 'TRUSS', geometry: { type: 'beam' as const, position: [8, 11, -16] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.8, 0.8, 2] as [number, number, number] } },
+  { id: 6005, type: 'TRUSS', geometry: { type: 'beam' as const, position: [16, 11, -16] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.8, 0.8, 2] as [number, number, number] } },
+  { id: 6006, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-20, 11, -12] as [number, number, number], rotation: [Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.8, 0.8, 1.6] as [number, number, number] } },
+  { id: 6007, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-20, 11, -4] as [number, number, number], rotation: [-Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.8, 0.8, 1.6] as [number, number, number] } },
+  { id: 6008, type: 'TRUSS', geometry: { type: 'beam' as const, position: [20, 11, -12] as [number, number, number], rotation: [Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.8, 0.8, 1.6] as [number, number, number] } },
+  { id: 6009, type: 'TRUSS', geometry: { type: 'beam' as const, position: [20, 11, -4] as [number, number, number], rotation: [-Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.8, 0.8, 1.6] as [number, number, number] } },
+
+  // ===== DIAGONAL BRACING - BOILER STRUCTURE =====
+  { id: 6101, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-4, 18, 14] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.7, 0.7, 2.4] as [number, number, number] } },
+  { id: 6102, type: 'TRUSS', geometry: { type: 'beam' as const, position: [4, 18, 14] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.7, 0.7, 2.4] as [number, number, number] } },
+  { id: 6103, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-8, 18, 12] as [number, number, number], rotation: [Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.7, 0.7, 2] as [number, number, number] } },
+  { id: 6104, type: 'TRUSS', geometry: { type: 'beam' as const, position: [8, 18, 12] as [number, number, number], rotation: [-Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.7, 0.7, 2] as [number, number, number] } },
+  { id: 6105, type: 'TRUSS', geometry: { type: 'beam' as const, position: [0, 18, 10] as [number, number, number], rotation: [Math.PI / 6, 0, 0] as [number, number, number], scale: [0.7, 0.7, 3] as [number, number, number] } },
+  { id: 6106, type: 'TRUSS', geometry: { type: 'beam' as const, position: [0, 18, 18] as [number, number, number], rotation: [-Math.PI / 6, 0, 0] as [number, number, number], scale: [0.7, 0.7, 3] as [number, number, number] } },
+
+  // ===== LATERAL WIND BRACING =====
+  { id: 6201, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-18, 16, -14] as [number, number, number], rotation: [0, Math.PI / 6, 0] as [number, number, number], scale: [0.6, 0.6, 3.2] as [number, number, number] } },
+  { id: 6202, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-10, 16, -14] as [number, number, number], rotation: [0, -Math.PI / 6, 0] as [number, number, number], scale: [0.6, 0.6, 3.2] as [number, number, number] } },
+  { id: 6203, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-2, 16, -14] as [number, number, number], rotation: [0, Math.PI / 6, 0] as [number, number, number], scale: [0.6, 0.6, 3.2] as [number, number, number] } },
+  { id: 6204, type: 'TRUSS', geometry: { type: 'beam' as const, position: [6, 16, -14] as [number, number, number], rotation: [0, -Math.PI / 6, 0] as [number, number, number], scale: [0.6, 0.6, 3.2] as [number, number, number] } },
+  { id: 6205, type: 'TRUSS', geometry: { type: 'beam' as const, position: [14, 16, -14] as [number, number, number], rotation: [0, Math.PI / 6, 0] as [number, number, number], scale: [0.6, 0.6, 3.2] as [number, number, number] } },
+
+  // ===== CROSS BRACING - EQUIPMENT PLATFORMS =====
+  { id: 6301, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-6, 22, 14] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.6, 0.6, 1.6] as [number, number, number] } },
+  { id: 6302, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-2, 22, 14] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.6, 0.6, 1.6] as [number, number, number] } },
+  { id: 6303, type: 'TRUSS', geometry: { type: 'beam' as const, position: [2, 22, 14] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.6, 0.6, 1.6] as [number, number, number] } },
+  { id: 6304, type: 'TRUSS', geometry: { type: 'beam' as const, position: [6, 22, 14] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.6, 0.6, 1.6] as [number, number, number] } },
+  { id: 6305, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-8, 22, 12] as [number, number, number], rotation: [Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.6, 0.6, 1.2] as [number, number, number] } },
+  { id: 6306, type: 'TRUSS', geometry: { type: 'beam' as const, position: [0, 22, 12] as [number, number, number], rotation: [-Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.6, 0.6, 1.2] as [number, number, number] } },
+  { id: 6307, type: 'TRUSS', geometry: { type: 'beam' as const, position: [8, 22, 12] as [number, number, number], rotation: [Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.6, 0.6, 1.2] as [number, number, number] } },
+
+  // ===== CHIMNEY SUPPORT RINGS =====
+  { id: 6401, type: 'TRUSS', geometry: { type: 'beam' as const, position: [16, 20, 14] as [number, number, number], rotation: [0, 0, 0] as [number, number, number], scale: [0.5, 0.5, 3.8] as [number, number, number] } },
+  { id: 6402, type: 'TRUSS', geometry: { type: 'beam' as const, position: [16, 20, 14] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.5, 0.5, 3.8] as [number, number, number] } },
+  { id: 6403, type: 'TRUSS', geometry: { type: 'beam' as const, position: [16, 40, 14] as [number, number, number], rotation: [0, 0, 0] as [number, number, number], scale: [0.5, 0.5, 3.4] as [number, number, number] } },
+  { id: 6404, type: 'TRUSS', geometry: { type: 'beam' as const, position: [16, 40, 14] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.5, 0.5, 3.4] as [number, number, number] } },
+  { id: 6405, type: 'TRUSS', geometry: { type: 'beam' as const, position: [16, 60, 14] as [number, number, number], rotation: [0, 0, 0] as [number, number, number], scale: [0.5, 0.5, 3] as [number, number, number] } },
+  { id: 6406, type: 'TRUSS', geometry: { type: 'beam' as const, position: [16, 60, 14] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.5, 0.5, 3] as [number, number, number] } },
+  { id: 6407, type: 'TRUSS', geometry: { type: 'beam' as const, position: [16, 80, 14] as [number, number, number], rotation: [0, 0, 0] as [number, number, number], scale: [0.5, 0.5, 2.6] as [number, number, number] } },
+  { id: 6408, type: 'TRUSS', geometry: { type: 'beam' as const, position: [16, 80, 14] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.5, 0.5, 2.6] as [number, number, number] } },
+];
+
 // Export geometry map for easy lookup
 export const modelGeometryMap: Record<string, typeof towerCraneGeometry> = {
   'model-1': towerCraneGeometry,
   'model-2': buildingFrameGeometry,
   'model-3': bridgeDeckGeometry,
   'model-4': torreTowerGeometry,
+  'model-5': powerPlantGeometry,
 };
 
 // Default export (backward compatibility)
