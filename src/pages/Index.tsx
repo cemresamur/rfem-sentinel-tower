@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Play, Settings, Upload } from 'lucide-react';
+import { Play, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Switch } from '@/components/ui/switch';
@@ -14,13 +14,9 @@ import { AnalysisTimeline } from '@/components/rfem/overview/AnalysisTimeline';
 import { ElementsTable } from '@/components/rfem/ElementsTable';
 import { ReportsTab } from '@/components/rfem/ReportsTab';
 import { CreateTaskDialog } from '@/components/rfem/CreateTaskDialog';
-import { UploadCADDialog } from '@/components/rfem/UploadCADDialog';
-import { Scene3D } from '@/components/rfem/viewer/Scene3D';
-import { ViewerControls } from '@/components/rfem/viewer/ViewerControls';
 import { Model, MemberLoad, Thresholds, AnalysisResult, ElementWithMetrics } from '@/types/rfem';
 import { DEFAULT_CONFIG } from '@/config/api';
 import { mockModels, mockElements, mockAnalysisResult, generateMockProgress } from '@/lib/mockData';
-import { mock3DElements } from '@/lib/mockGeometry';
 
 const Index = () => {
   const { toast } = useToast();
@@ -36,7 +32,6 @@ const Index = () => {
   const [progress, setProgress] = useState(0);
   const [currentStep, setCurrentStep] = useState(0);
   const [taskDialogOpen, setTaskDialogOpen] = useState(false);
-  const [uploadDialogOpen, setUploadDialogOpen] = useState(false);
   const [selectedElement, setSelectedElement] = useState<ElementWithMetrics | null>(null);
   const [selectedTab, setSelectedTab] = useState('overview');
 
@@ -95,23 +90,6 @@ const Index = () => {
     });
   };
 
-  const handleCADUpload = (file: File) => {
-    // In production, this would parse the CAD file and extract geometry
-    toast({
-      title: 'Processing CAD File',
-      description: `Parsing ${file.name} and extracting structural elements...`,
-    });
-
-    // Simulate processing
-    setTimeout(() => {
-      toast({
-        title: 'CAD File Loaded',
-        description: '3D model ready for analysis. View in 3D Viewer tab.',
-      });
-      setSelectedTab('3d-viewer');
-    }, 2000);
-  };
-
   const enrichedElements: ElementWithMetrics[] = mockElements.map((element) => {
     const exceedance = analysisResult?.exceedances?.find((exc) => exc.element_id === element.id);
     const heatmapData = analysisResult?.heatmap?.find((h) => h.element_id === element.id);
@@ -132,7 +110,12 @@ const Index = () => {
         models={models}
         selectedModel={selectedModel}
         onSelectModel={setSelectedModel}
-        onUpload={() => setUploadDialogOpen(true)}
+        onUpload={() =>
+          toast({
+            title: 'Upload Feature',
+            description: 'Model upload functionality would be implemented here',
+          })
+        }
       />
 
       {/* Main Content */}
@@ -178,18 +161,11 @@ const Index = () => {
         {/* Main Content Area */}
         <div className="flex-1 overflow-auto p-6">
           <Tabs value={selectedTab} onValueChange={setSelectedTab}>
-            <div className="flex items-center justify-between mb-6">
-              <TabsList>
-                <TabsTrigger value="overview">Overview</TabsTrigger>
-                <TabsTrigger value="3d-viewer">3D Viewer</TabsTrigger>
-                <TabsTrigger value="elements">Elements</TabsTrigger>
-                <TabsTrigger value="reports">Reports</TabsTrigger>
-              </TabsList>
-              <Button variant="outline" size="sm" onClick={() => setUploadDialogOpen(true)}>
-                <Upload className="h-4 w-4 mr-2" />
-                Upload CAD
-              </Button>
-            </div>
+            <TabsList className="mb-6">
+              <TabsTrigger value="overview">Overview</TabsTrigger>
+              <TabsTrigger value="elements">Elements</TabsTrigger>
+              <TabsTrigger value="reports">Reports</TabsTrigger>
+            </TabsList>
 
             <TabsContent value="overview" className="space-y-6">
               {/* Run Analysis Button */}
@@ -250,25 +226,6 @@ const Index = () => {
               )}
             </TabsContent>
 
-            <TabsContent value="3d-viewer">
-              <ViewerControls />
-              {analysisResult && analysisResult.heatmap ? (
-                <Scene3D heatmap={analysisResult.heatmap} elements={mock3DElements} />
-              ) : (
-                <div className="text-center py-16 text-muted-foreground">
-                  <Upload className="h-16 w-16 mx-auto mb-4 opacity-50" />
-                  <p className="text-lg">No 3D Model Loaded</p>
-                  <p className="text-sm mt-1 mb-4">
-                    Upload a CAD file or run an analysis to view the 3D heatmap
-                  </p>
-                  <Button onClick={() => setUploadDialogOpen(true)} variant="outline">
-                    <Upload className="h-4 w-4 mr-2" />
-                    Upload CAD File
-                  </Button>
-                </div>
-              )}
-            </TabsContent>
-
             <TabsContent value="elements">
               <ElementsTable elements={enrichedElements} onCreateTask={handleCreateTask} />
             </TabsContent>
@@ -302,13 +259,6 @@ const Index = () => {
         open={taskDialogOpen}
         onOpenChange={setTaskDialogOpen}
         onSubmit={handleTaskSubmit}
-      />
-
-      {/* CAD Upload Dialog */}
-      <UploadCADDialog
-        open={uploadDialogOpen}
-        onOpenChange={setUploadDialogOpen}
-        onUpload={handleCADUpload}
       />
     </div>
   );
