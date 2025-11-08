@@ -231,7 +231,7 @@ export const buildingFrameGeometry = [
   { id: 219, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [10, 4.5, 2] as [number, number, number], scale: [1, 3, 1] as [number, number, number] } },
   { id: 220, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [10, 4.5, 6] as [number, number, number], scale: [1, 3, 1] as [number, number, number] } },
 
-  // ===== CORE COLUMNS (Elevator/Stair Shafts) - FLOORS 2-12 =====
+  // ===== CORE COLUMNS (Elevator/Stair Shafts) - FLOORS 2-18 =====
   { id: 221, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-2, 4.5, -2] as [number, number, number], scale: [1.1, 3, 1.1] as [number, number, number] } },
   { id: 222, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [2, 4.5, -2] as [number, number, number], scale: [1.1, 3, 1.1] as [number, number, number] } },
   { id: 223, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-2, 4.5, 2] as [number, number, number], scale: [1.1, 3, 1.1] as [number, number, number] } },
@@ -247,6 +247,16 @@ export const buildingFrameGeometry = [
   { id: 231, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-2, 10.5, 2] as [number, number, number], scale: [1.0, 3, 1.0] as [number, number, number] } },
   { id: 232, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [2, 10.5, 2] as [number, number, number], scale: [1.0, 3, 1.0] as [number, number, number] } },
 
+  { id: 233, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-2, 13.5, -2] as [number, number, number], scale: [0.95, 3, 0.95] as [number, number, number] } },
+  { id: 234, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [2, 13.5, -2] as [number, number, number], scale: [0.95, 3, 0.95] as [number, number, number] } },
+  { id: 235, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-2, 13.5, 2] as [number, number, number], scale: [0.95, 3, 0.95] as [number, number, number] } },
+  { id: 236, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [2, 13.5, 2] as [number, number, number], scale: [0.95, 3, 0.95] as [number, number, number] } },
+
+  { id: 237, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-2, 16.5, -2] as [number, number, number], scale: [0.9, 3, 0.9] as [number, number, number] } },
+  { id: 238, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [2, 16.5, -2] as [number, number, number], scale: [0.9, 3, 0.9] as [number, number, number] } },
+  { id: 239, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-2, 16.5, 2] as [number, number, number], scale: [0.9, 3, 0.9] as [number, number, number] } },
+  { id: 240, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [2, 16.5, 2] as [number, number, number], scale: [0.9, 3, 0.9] as [number, number, number] } },
+
   // ===== PERIMETER COLUMNS - FLOORS 5-8 =====
   { id: 301, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-10, 7.5, -10] as [number, number, number], scale: [0.95, 3, 0.95] as [number, number, number] } },
   { id: 302, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-6, 7.5, -10] as [number, number, number], scale: [0.95, 3, 0.95] as [number, number, number] } },
@@ -258,11 +268,45 @@ export const buildingFrameGeometry = [
   { id: 308, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [10, 7.5, 10] as [number, number, number], scale: [0.95, 3, 0.95] as [number, number, number] } },
   { id: 309, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-10, 7.5, -6] as [number, number, number], scale: [0.95, 3, 0.95] as [number, number, number] } },
   { id: 310, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [10, 7.5, 6] as [number, number, number], scale: [0.95, 3, 0.95] as [number, number, number] } },
+  { id: 311, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-6, 7.5, 10] as [number, number, number], scale: [0.95, 3, 0.95] as [number, number, number] } },
+  { id: 312, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [6, 7.5, 10] as [number, number, number], scale: [0.95, 3, 0.95] as [number, number, number] } },
 
   { id: 351, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-10, 10.5, -10] as [number, number, number], scale: [0.9, 3, 0.9] as [number, number, number] } },
   { id: 352, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [10, 10.5, -10] as [number, number, number], scale: [0.9, 3, 0.9] as [number, number, number] } },
   { id: 353, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-10, 10.5, 10] as [number, number, number], scale: [0.9, 3, 0.9] as [number, number, number] } },
   { id: 354, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [10, 10.5, 10] as [number, number, number], scale: [0.9, 3, 0.9] as [number, number, number] } },
+  { id: 355, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-8, 10.5, -10] as [number, number, number], scale: [0.9, 3, 0.9] as [number, number, number] } },
+  { id: 356, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [8, 10.5, -10] as [number, number, number], scale: [0.9, 3, 0.9] as [number, number, number] } },
+
+  // ===== PERIMETER COLUMNS - FLOORS 9-12 =====
+  { id: 361, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-10, 13.5, -10] as [number, number, number], scale: [0.85, 3, 0.85] as [number, number, number] } },
+  { id: 362, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [10, 13.5, -10] as [number, number, number], scale: [0.85, 3, 0.85] as [number, number, number] } },
+  { id: 363, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-10, 13.5, 10] as [number, number, number], scale: [0.85, 3, 0.85] as [number, number, number] } },
+  { id: 364, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [10, 13.5, 10] as [number, number, number], scale: [0.85, 3, 0.85] as [number, number, number] } },
+  { id: 365, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-6, 13.5, -10] as [number, number, number], scale: [0.85, 3, 0.85] as [number, number, number] } },
+  { id: 366, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [6, 13.5, -10] as [number, number, number], scale: [0.85, 3, 0.85] as [number, number, number] } },
+  { id: 367, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-6, 13.5, 10] as [number, number, number], scale: [0.85, 3, 0.85] as [number, number, number] } },
+  { id: 368, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [6, 13.5, 10] as [number, number, number], scale: [0.85, 3, 0.85] as [number, number, number] } },
+
+  { id: 371, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-10, 16.5, -10] as [number, number, number], scale: [0.8, 3, 0.8] as [number, number, number] } },
+  { id: 372, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [10, 16.5, -10] as [number, number, number], scale: [0.8, 3, 0.8] as [number, number, number] } },
+  { id: 373, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-10, 16.5, 10] as [number, number, number], scale: [0.8, 3, 0.8] as [number, number, number] } },
+  { id: 374, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [10, 16.5, 10] as [number, number, number], scale: [0.8, 3, 0.8] as [number, number, number] } },
+
+  // ===== PERIMETER COLUMNS - FLOORS 13-15 =====
+  { id: 381, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-8, 19.5, -8] as [number, number, number], scale: [0.75, 3, 0.75] as [number, number, number] } },
+  { id: 382, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [8, 19.5, -8] as [number, number, number], scale: [0.75, 3, 0.75] as [number, number, number] } },
+  { id: 383, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-8, 19.5, 8] as [number, number, number], scale: [0.75, 3, 0.75] as [number, number, number] } },
+  { id: 384, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [8, 19.5, 8] as [number, number, number], scale: [0.75, 3, 0.75] as [number, number, number] } },
+  { id: 385, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-4, 19.5, -8] as [number, number, number], scale: [0.75, 3, 0.75] as [number, number, number] } },
+  { id: 386, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [4, 19.5, -8] as [number, number, number], scale: [0.75, 3, 0.75] as [number, number, number] } },
+  { id: 387, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-4, 19.5, 8] as [number, number, number], scale: [0.75, 3, 0.75] as [number, number, number] } },
+  { id: 388, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [4, 19.5, 8] as [number, number, number], scale: [0.75, 3, 0.75] as [number, number, number] } },
+
+  { id: 391, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-6, 22.5, -6] as [number, number, number], scale: [0.7, 3, 0.7] as [number, number, number] } },
+  { id: 392, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [6, 22.5, -6] as [number, number, number], scale: [0.7, 3, 0.7] as [number, number, number] } },
+  { id: 393, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-6, 22.5, 6] as [number, number, number], scale: [0.7, 3, 0.7] as [number, number, number] } },
+  { id: 394, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [6, 22.5, 6] as [number, number, number], scale: [0.7, 3, 0.7] as [number, number, number] } },
 
   // ===== FLOOR BEAMS - LEVEL 1 (Foundation/Ground) =====
   { id: 401, type: 'BEAM', geometry: { type: 'beam' as const, position: [-8, 3, -10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1, 1, 0.8] as [number, number, number] } },
@@ -294,6 +338,8 @@ export const buildingFrameGeometry = [
   { id: 507, type: 'BEAM', geometry: { type: 'beam' as const, position: [8, 6, 10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.9, 0.9, 0.8] as [number, number, number] } },
   { id: 508, type: 'BEAM', geometry: { type: 'beam' as const, position: [-10, 6, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.9, 0.9, 0.8] as [number, number, number] } },
   { id: 509, type: 'BEAM', geometry: { type: 'beam' as const, position: [10, 6, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.9, 0.9, 0.8] as [number, number, number] } },
+  { id: 510, type: 'BEAM', geometry: { type: 'beam' as const, position: [-10, 6, -6] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.9, 0.9, 0.8] as [number, number, number] } },
+  { id: 511, type: 'BEAM', geometry: { type: 'beam' as const, position: [10, 6, 6] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.9, 0.9, 0.8] as [number, number, number] } },
 
   // ===== FLOOR BEAMS - LEVEL 3 =====
   { id: 601, type: 'BEAM', geometry: { type: 'beam' as const, position: [-8, 9, -10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.85, 0.85, 0.8] as [number, number, number] } },
@@ -301,12 +347,53 @@ export const buildingFrameGeometry = [
   { id: 603, type: 'BEAM', geometry: { type: 'beam' as const, position: [8, 9, -10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.85, 0.85, 0.8] as [number, number, number] } },
   { id: 604, type: 'BEAM', geometry: { type: 'beam' as const, position: [-10, 9, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.85, 0.85, 0.8] as [number, number, number] } },
   { id: 605, type: 'BEAM', geometry: { type: 'beam' as const, position: [10, 9, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.85, 0.85, 0.8] as [number, number, number] } },
+  { id: 606, type: 'BEAM', geometry: { type: 'beam' as const, position: [-4, 9, -10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.85, 0.85, 0.8] as [number, number, number] } },
+  { id: 607, type: 'BEAM', geometry: { type: 'beam' as const, position: [4, 9, -10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.85, 0.85, 0.8] as [number, number, number] } },
 
   // ===== FLOOR BEAMS - LEVEL 4 =====
   { id: 701, type: 'BEAM', geometry: { type: 'beam' as const, position: [-5, 12, -10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 0.8] as [number, number, number] } },
   { id: 702, type: 'BEAM', geometry: { type: 'beam' as const, position: [5, 12, -10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 0.8] as [number, number, number] } },
   { id: 703, type: 'BEAM', geometry: { type: 'beam' as const, position: [-10, 12, -5] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 0.8] as [number, number, number] } },
   { id: 704, type: 'BEAM', geometry: { type: 'beam' as const, position: [10, 12, 5] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 0.8] as [number, number, number] } },
+  { id: 705, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 12, -10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 0.8] as [number, number, number] } },
+  { id: 706, type: 'BEAM', geometry: { type: 'beam' as const, position: [-10, 12, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 0.8] as [number, number, number] } },
+  { id: 707, type: 'BEAM', geometry: { type: 'beam' as const, position: [10, 12, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 0.8] as [number, number, number] } },
+
+  // ===== FLOOR BEAMS - LEVELS 5-7 =====
+  { id: 711, type: 'BEAM', geometry: { type: 'beam' as const, position: [-6, 15, -10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.75, 0.75, 0.8] as [number, number, number] } },
+  { id: 712, type: 'BEAM', geometry: { type: 'beam' as const, position: [6, 15, -10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.75, 0.75, 0.8] as [number, number, number] } },
+  { id: 713, type: 'BEAM', geometry: { type: 'beam' as const, position: [-10, 15, -6] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.75, 0.75, 0.8] as [number, number, number] } },
+  { id: 714, type: 'BEAM', geometry: { type: 'beam' as const, position: [10, 15, 6] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.75, 0.75, 0.8] as [number, number, number] } },
+  { id: 715, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 15, -10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.75, 0.75, 0.8] as [number, number, number] } },
+  { id: 716, type: 'BEAM', geometry: { type: 'beam' as const, position: [-10, 15, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.75, 0.75, 0.8] as [number, number, number] } },
+  { id: 717, type: 'BEAM', geometry: { type: 'beam' as const, position: [10, 15, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.75, 0.75, 0.8] as [number, number, number] } },
+
+  // ===== FLOOR BEAMS - LEVELS 8-10 =====
+  { id: 721, type: 'BEAM', geometry: { type: 'beam' as const, position: [-5, 18, -8] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.7, 0.7, 0.7] as [number, number, number] } },
+  { id: 722, type: 'BEAM', geometry: { type: 'beam' as const, position: [5, 18, -8] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.7, 0.7, 0.7] as [number, number, number] } },
+  { id: 723, type: 'BEAM', geometry: { type: 'beam' as const, position: [-8, 18, -5] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.7, 0.7, 0.7] as [number, number, number] } },
+  { id: 724, type: 'BEAM', geometry: { type: 'beam' as const, position: [8, 18, 5] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.7, 0.7, 0.7] as [number, number, number] } },
+  { id: 725, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 18, -8] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.7, 0.7, 0.7] as [number, number, number] } },
+  { id: 726, type: 'BEAM', geometry: { type: 'beam' as const, position: [-8, 18, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.7, 0.7, 0.7] as [number, number, number] } },
+  { id: 727, type: 'BEAM', geometry: { type: 'beam' as const, position: [8, 18, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.7, 0.7, 0.7] as [number, number, number] } },
+
+  // ===== FLOOR BEAMS - LEVELS 11-13 =====
+  { id: 731, type: 'BEAM', geometry: { type: 'beam' as const, position: [-4, 21, -6] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.65, 0.65, 0.6] as [number, number, number] } },
+  { id: 732, type: 'BEAM', geometry: { type: 'beam' as const, position: [4, 21, -6] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.65, 0.65, 0.6] as [number, number, number] } },
+  { id: 733, type: 'BEAM', geometry: { type: 'beam' as const, position: [-6, 21, -4] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.65, 0.65, 0.6] as [number, number, number] } },
+  { id: 734, type: 'BEAM', geometry: { type: 'beam' as const, position: [6, 21, 4] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.65, 0.65, 0.6] as [number, number, number] } },
+
+  // ===== OUTRIGGER BEAMS - MECHANICAL FLOOR (Floor 8) =====
+  { id: 741, type: 'BEAM', geometry: { type: 'beam' as const, position: [-6, 12, -2] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.2, 1.2, 1.6] as [number, number, number] } },
+  { id: 742, type: 'BEAM', geometry: { type: 'beam' as const, position: [6, 12, 2] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.2, 1.2, 1.6] as [number, number, number] } },
+  { id: 743, type: 'BEAM', geometry: { type: 'beam' as const, position: [-2, 12, -6] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.2, 1.2, 1.6] as [number, number, number] } },
+  { id: 744, type: 'BEAM', geometry: { type: 'beam' as const, position: [2, 12, 6] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.2, 1.2, 1.6] as [number, number, number] } },
+
+  // ===== TRANSFER GIRDERS - MECHANICAL FLOOR (Floor 8) =====
+  { id: 751, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 12, -10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.3, 1.3, 4] as [number, number, number] } },
+  { id: 752, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 12, 10] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [1.3, 1.3, 4] as [number, number, number] } },
+  { id: 753, type: 'BEAM', geometry: { type: 'beam' as const, position: [-10, 12, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.3, 1.3, 4] as [number, number, number] } },
+  { id: 754, type: 'BEAM', geometry: { type: 'beam' as const, position: [10, 12, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [1.3, 1.3, 4] as [number, number, number] } },
 
   // ===== DIAGONAL BRACING - FLOORS 2-4 (Every 3 floors) =====
   // North face
@@ -333,12 +420,49 @@ export const buildingFrameGeometry = [
   { id: 816, type: 'TRUSS', geometry: { type: 'beam' as const, position: [8, 8, -10] as [number, number, number], rotation: [0, 0, Math.PI / 6] as [number, number, number], scale: [0.48, 0.48, 1.4] as [number, number, number] } },
   { id: 817, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-10, 8, 0] as [number, number, number], rotation: [Math.PI / 6, Math.PI / 2, 0] as [number, number, number], scale: [0.48, 0.48, 1.4] as [number, number, number] } },
   { id: 818, type: 'TRUSS', geometry: { type: 'beam' as const, position: [10, 8, 0] as [number, number, number], rotation: [-Math.PI / 6, Math.PI / 2, 0] as [number, number, number], scale: [0.48, 0.48, 1.4] as [number, number, number] } },
+  { id: 823, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-4, 8, 10] as [number, number, number], rotation: [0, 0, Math.PI / 6] as [number, number, number], scale: [0.48, 0.48, 1.4] as [number, number, number] } },
+  { id: 824, type: 'TRUSS', geometry: { type: 'beam' as const, position: [4, 8, 10] as [number, number, number], rotation: [0, 0, -Math.PI / 6] as [number, number, number], scale: [0.48, 0.48, 1.4] as [number, number, number] } },
 
   // ===== DIAGONAL BRACING - FLOORS 8-10 =====
   { id: 819, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-5, 11, -10] as [number, number, number], rotation: [0, 0, Math.PI / 6] as [number, number, number], scale: [0.45, 0.45, 1.3] as [number, number, number] } },
   { id: 820, type: 'TRUSS', geometry: { type: 'beam' as const, position: [5, 11, -10] as [number, number, number], rotation: [0, 0, -Math.PI / 6] as [number, number, number], scale: [0.45, 0.45, 1.3] as [number, number, number] } },
   { id: 821, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-10, 11, -5] as [number, number, number], rotation: [Math.PI / 6, Math.PI / 2, 0] as [number, number, number], scale: [0.45, 0.45, 1.3] as [number, number, number] } },
   { id: 822, type: 'TRUSS', geometry: { type: 'beam' as const, position: [10, 11, 5] as [number, number, number], rotation: [-Math.PI / 6, Math.PI / 2, 0] as [number, number, number], scale: [0.45, 0.45, 1.3] as [number, number, number] } },
+  { id: 825, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-8, 11, 10] as [number, number, number], rotation: [0, 0, Math.PI / 6] as [number, number, number], scale: [0.45, 0.45, 1.3] as [number, number, number] } },
+  { id: 826, type: 'TRUSS', geometry: { type: 'beam' as const, position: [8, 11, 10] as [number, number, number], rotation: [0, 0, -Math.PI / 6] as [number, number, number], scale: [0.45, 0.45, 1.3] as [number, number, number] } },
+
+  // ===== DIAGONAL BRACING - FLOORS 11-13 =====
+  { id: 827, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-6, 14, -10] as [number, number, number], rotation: [0, 0, Math.PI / 6] as [number, number, number], scale: [0.42, 0.42, 1.2] as [number, number, number] } },
+  { id: 828, type: 'TRUSS', geometry: { type: 'beam' as const, position: [6, 14, -10] as [number, number, number], rotation: [0, 0, -Math.PI / 6] as [number, number, number], scale: [0.42, 0.42, 1.2] as [number, number, number] } },
+  { id: 829, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-10, 14, -6] as [number, number, number], rotation: [Math.PI / 6, Math.PI / 2, 0] as [number, number, number], scale: [0.42, 0.42, 1.2] as [number, number, number] } },
+  { id: 830, type: 'TRUSS', geometry: { type: 'beam' as const, position: [10, 14, 6] as [number, number, number], rotation: [-Math.PI / 6, Math.PI / 2, 0] as [number, number, number], scale: [0.42, 0.42, 1.2] as [number, number, number] } },
+
+  // ===== DIAGONAL BRACING - FLOORS 14-16 =====
+  { id: 831, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-4, 17, -8] as [number, number, number], rotation: [0, 0, Math.PI / 6] as [number, number, number], scale: [0.4, 0.4, 1.1] as [number, number, number] } },
+  { id: 832, type: 'TRUSS', geometry: { type: 'beam' as const, position: [4, 17, -8] as [number, number, number], rotation: [0, 0, -Math.PI / 6] as [number, number, number], scale: [0.4, 0.4, 1.1] as [number, number, number] } },
+  { id: 833, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-8, 17, -4] as [number, number, number], rotation: [Math.PI / 6, Math.PI / 2, 0] as [number, number, number], scale: [0.4, 0.4, 1.1] as [number, number, number] } },
+  { id: 834, type: 'TRUSS', geometry: { type: 'beam' as const, position: [8, 17, 4] as [number, number, number], rotation: [-Math.PI / 6, Math.PI / 2, 0] as [number, number, number], scale: [0.4, 0.4, 1.1] as [number, number, number] } },
+
+  // ===== X-BRACING CORE - FLOORS 2-8 =====
+  { id: 841, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-2, 6, 0] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.4, 0.4, 0.8] as [number, number, number] } },
+  { id: 842, type: 'TRUSS', geometry: { type: 'beam' as const, position: [2, 6, 0] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.4, 0.4, 0.8] as [number, number, number] } },
+  { id: 843, type: 'TRUSS', geometry: { type: 'beam' as const, position: [0, 6, -2] as [number, number, number], rotation: [Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.4, 0.4, 0.8] as [number, number, number] } },
+  { id: 844, type: 'TRUSS', geometry: { type: 'beam' as const, position: [0, 6, 2] as [number, number, number], rotation: [-Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.4, 0.4, 0.8] as [number, number, number] } },
+
+  { id: 845, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-2, 9, 0] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.4, 0.4, 0.8] as [number, number, number] } },
+  { id: 846, type: 'TRUSS', geometry: { type: 'beam' as const, position: [2, 9, 0] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.4, 0.4, 0.8] as [number, number, number] } },
+  { id: 847, type: 'TRUSS', geometry: { type: 'beam' as const, position: [0, 9, -2] as [number, number, number], rotation: [-Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.4, 0.4, 0.8] as [number, number, number] } },
+  { id: 848, type: 'TRUSS', geometry: { type: 'beam' as const, position: [0, 9, 2] as [number, number, number], rotation: [Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.4, 0.4, 0.8] as [number, number, number] } },
+
+  // ===== SECONDARY BEAMS - Distributed across levels =====
+  { id: 851, type: 'BEAM', geometry: { type: 'beam' as const, position: [-8, 6, -6] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.6, 0.6, 0.8] as [number, number, number] } },
+  { id: 852, type: 'BEAM', geometry: { type: 'beam' as const, position: [8, 6, 6] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.6, 0.6, 0.8] as [number, number, number] } },
+  { id: 853, type: 'BEAM', geometry: { type: 'beam' as const, position: [-6, 9, -8] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.6, 0.6, 0.8] as [number, number, number] } },
+  { id: 854, type: 'BEAM', geometry: { type: 'beam' as const, position: [6, 9, 8] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.6, 0.6, 0.8] as [number, number, number] } },
+  { id: 855, type: 'BEAM', geometry: { type: 'beam' as const, position: [-4, 12, -8] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.6, 0.6, 0.8] as [number, number, number] } },
+  { id: 856, type: 'BEAM', geometry: { type: 'beam' as const, position: [4, 12, 8] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.6, 0.6, 0.8] as [number, number, number] } },
+  { id: 857, type: 'BEAM', geometry: { type: 'beam' as const, position: [-8, 15, -4] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.6, 0.6, 0.8] as [number, number, number] } },
+  { id: 858, type: 'BEAM', geometry: { type: 'beam' as const, position: [8, 15, 4] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.6, 0.6, 0.8] as [number, number, number] } },
 ];
 
 // ==================== MODEL 3: CABLE-STAYED BRIDGE ====================
