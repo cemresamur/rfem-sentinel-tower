@@ -131,12 +131,24 @@ const Index = () => {
     const exceedance = analysisResult?.exceedances?.find((exc) => exc.element_id === element.id);
     const heatmapData = analysisResult?.heatmap?.find((h) => h.element_id === element.id);
 
+    const workerTasks = element.id === 123 ? [
+      { id: 'task-1', description: 'Install temporary shoring at NW corner', priority: 'high' as const, estimatedHours: 4 },
+      { id: 'task-2', description: 'Reduce crane load by 15%', priority: 'high' as const, estimatedHours: 2 },
+      { id: 'task-3', description: 'Verify foundation bolt tension', priority: 'medium' as const, estimatedHours: 1 },
+    ] : element.id === 451 ? [
+      { id: 'task-4', description: 'Reduce applied load on north beam', priority: 'high' as const, estimatedHours: 3 },
+      { id: 'task-5', description: 'Install additional support brackets', priority: 'medium' as const, estimatedHours: 6 },
+    ] : exceedance ? [
+      { id: `task-${element.id}`, description: `Address ${exceedance.type} issue at ${exceedance.location}`, priority: 'medium' as const, estimatedHours: 4 },
+    ] : undefined;
+
     return {
       ...element,
       utilization: heatmapData?.util,
       deflection_mm: exceedance?.type === 'deflection_mm' ? exceedance.value : undefined,
       location: exceedance?.location,
       recommendation: exceedance?.recommendation,
+      workerTasks,
     };
   });
 
@@ -292,6 +304,8 @@ const Index = () => {
               <ReportsTab
                 reportUrl={analysisResult?.report_url}
                 exceedances={analysisResult?.exceedances}
+                analysisResult={analysisResult}
+                modelName={mockModels.find(m => m.id === selectedModel?.id)?.name}
               />
             </TabsContent>
           </Tabs>

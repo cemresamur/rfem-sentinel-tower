@@ -71,10 +71,18 @@ export interface SiteTask {
   recommendation: string;
 }
 
+export interface WorkerTask {
+  id: string;
+  description: string;
+  priority: 'high' | 'medium' | 'low';
+  estimatedHours: number;
+}
+
 export interface ElementWithMetrics extends Element {
   utilization?: number;
   deflection_mm?: number;
   von_mises_mpa?: number;
   location?: string;
   recommendation?: string;
+  workerTasks?: WorkerTask[];
 }
