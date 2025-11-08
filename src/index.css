@@ -9,26 +9,25 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 210 25% 98%;
-    --foreground: 220 90% 18%;
+    --foreground: 210 100% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 90% 18%;
+    --card-foreground: 210 100% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 90% 18%;
+    --popover-foreground: 210 100% 10%;
 
-    --primary: 220 85% 45%;
+    --primary: 195 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-navy: 220 95% 25%;
 
     --secondary: 210 40% 92%;
-    --secondary-foreground: 220 90% 18%;
+    --secondary-foreground: 210 100% 10%;
 
     --muted: 210 30% 95%;
-    --muted-foreground: 220 50% 35%;
+    --muted-foreground: 210 40% 40%;
 
     --accent: 195 100% 92%;
-    --accent-foreground: 220 90% 18%;
+    --accent-foreground: 210 100% 10%;
 
     --success: 142 70% 45%;
     --success-foreground: 0 0% 100%;
@@ -45,111 +44,96 @@ All colors MUST be HSL.
 
     --radius: 0.375rem;
 
-    --sidebar-background: 220 90% 12%;
+    --sidebar-background: 210 30% 12%;
     --sidebar-foreground: 195 100% 85%;
     --sidebar-primary: 195 100% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 80% 16%;
+    --sidebar-accent: 210 25% 16%;
     --sidebar-accent-foreground: 195 100% 85%;
     --sidebar-border: 195 100% 20%;
     --sidebar-ring: 195 100% 50%;
 
     /* Risk level colors */
-    --risk-critical: 0 100% 60%;
-    --risk-high: 25 100% 55%;
-    --risk-medium: 38 100% 60%;
+    --risk-critical: 0 85% 55%;
+    --risk-high: 25 95% 50%;
+    --risk-medium: 38 95% 55%;
     --risk-low: 142 70% 45%;
     --risk-safe: 160 80% 40%;
 
     /* Futuristic enhancements */
-    --glow-primary: 195 100% 60%;
+    --glow-primary: 195 100% 50%;
     --glow-secondary: 210 100% 65%;
-    --glow-neon: 180 100% 50%;
     --tech-grid: 195 50% 30%;
     --surface-elevated: 210 20% 99%;
-    --navy: 220 95% 25%;
   }
 
   .dark {
-    --background: 220 90% 6%;
-    --foreground: 195 100% 88%;
+    --background: 210 30% 8%;
+    --foreground: 195 100% 95%;
 
-    --card: 220 80% 10%;
-    --card-foreground: 195 100% 88%;
+    --card: 210 25% 11%;
+    --card-foreground: 195 100% 95%;
 
-    --popover: 220 80% 10%;
-    --popover-foreground: 195 100% 88%;
+    --popover: 210 25% 11%;
+    --popover-foreground: 195 100% 95%;
 
     --primary: 195 100% 55%;
-    --primary-foreground: 220 90% 8%;
-    --primary-navy: 220 95% 20%;
+    --primary-foreground: 210 30% 8%;
 
-    --secondary: 220 70% 15%;
-    --secondary-foreground: 195 100% 88%;
+    --secondary: 210 25% 16%;
+    --secondary-foreground: 195 100% 95%;
 
-    --muted: 220 70% 12%;
-    --muted-foreground: 195 60% 70%;
+    --muted: 210 25% 14%;
+    --muted-foreground: 210 30% 65%;
 
     --accent: 195 100% 20%;
-    --accent-foreground: 195 100% 88%;
+    --accent-foreground: 195 100% 95%;
 
     --success: 142 70% 50%;
-    --success-foreground: 220 90% 8%;
+    --success-foreground: 210 30% 8%;
 
     --warning: 38 95% 60%;
-    --warning-foreground: 220 90% 8%;
+    --warning-foreground: 210 30% 8%;
 
-    --destructive: 0 100% 65%;
+    --destructive: 0 85% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 195 50% 20%;
     --input: 195 50% 18%;
     --ring: 195 100% 55%;
 
-    --sidebar-background: 220 90% 5%;
+    --sidebar-background: 210 30% 6%;
     --sidebar-foreground: 195 100% 85%;
     --sidebar-primary: 195 100% 55%;
-    --sidebar-primary-foreground: 220 90% 8%;
-    --sidebar-accent: 220 80% 8%;
+    --sidebar-primary-foreground: 210 30% 8%;
+    --sidebar-accent: 210 25% 10%;
     --sidebar-accent-foreground: 195 100% 85%;
     --sidebar-border: 195 80% 18%;
     --sidebar-ring: 195 100% 55%;
 
-    --risk-critical: 0 100% 70%;
-    --risk-high: 25 100% 65%;
+    --risk-critical: 0 100% 65%;
+    --risk-high: 25 100% 60%;
     --risk-medium: 38 100% 65%;
     --risk-low: 142 80% 55%;
     --risk-safe: 160 85% 50%;
 
     /* Futuristic enhancements */
-    --glow-primary: 195 100% 65%;
-    --glow-secondary: 210 100% 75%;
-    --glow-neon: 180 100% 60%;
+    --glow-primary: 195 100% 55%;
+    --glow-secondary: 210 100% 70%;
     --tech-grid: 195 80% 25%;
-    --surface-elevated: 220 70% 12%;
-    --navy: 220 95% 15%;
+    --surface-elevated: 210 25% 13%;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   * {
     @apply border-border;
-    font-family: 'Rajdhani', sans-serif;
-  }
-
-  h1, h2, h3, h4, h5, h6, .heading {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.05em;
   }
 
   body {
     @apply bg-background text-foreground;
     position: relative;
     overflow-x: hidden;
-    font-weight: 500;
   }
 
   body::before {
@@ -311,45 +295,10 @@ All colors MUST be HSL.
     content: '';
     position: absolute;
     inset: -2px;
-    border: 2px solid hsl(var(--glow-neon));
+    border: 2px solid hsl(var(--glow-primary));
     border-radius: inherit;
     opacity: 0;
     animation: hologram-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  .alert-pulse {
-    animation: alert-pulse 1.5s ease-in-out infinite;
-  }
-
-  .crisis-border {
-    position: relative;
-    border: 2px solid hsl(var(--glow-neon) / 0.4);
-    box-shadow: 
-      0 0 25px hsl(var(--glow-neon) / 0.3),
-      inset 0 0 25px hsl(var(--glow-neon) / 0.1);
-  }
-
-  .crisis-border::before,
-  .crisis-border::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 3px solid hsl(var(--glow-neon));
-  }
-
-  .crisis-border::before {
-    top: -3px;
-    left: -3px;
-    border-right: none;
-    border-bottom: none;
-  }
-
-  .crisis-border::after {
-    bottom: -3px;
-    right: -3px;
-    border-left: none;
-    border-top: none;
   }
 
   @keyframes tech-shine {
@@ -416,17 +365,6 @@ All colors MUST be HSL.
     50% {
       opacity: 0.6;
       transform: scale(1.05);
-    }
-  }
-
-  @keyframes alert-pulse {
-    0%, 100% {
-      box-shadow: 0 0 20px hsl(var(--glow-neon) / 0.4);
-      border-color: hsl(var(--glow-neon) / 0.4);
-    }
-    50% {
-      box-shadow: 0 0 40px hsl(var(--glow-neon) / 0.8), inset 0 0 20px hsl(var(--glow-neon) / 0.2);
-      border-color: hsl(var(--glow-neon) / 0.8);
     }
   }
 }
