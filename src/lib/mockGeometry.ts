@@ -495,11 +495,97 @@ export const bridgeDeckGeometry = [
   { id: 756, type: 'TRUSS', geometry: { type: 'beam' as const, position: [24, 4, 1.5] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 6] as [number, number, number], scale: [0.5, 0.5, 0.8] as [number, number, number] } },
 ];
 
+// ==================== MODEL 4: TORRE COMMUNICATION TOWER ====================
+// Ultra-tall tapering lattice tower with antenna mounts (60m height)
+export const torreTowerGeometry = [
+  // ===== FOUNDATION BASE LEGS (0-3m) =====
+  { id: 4001, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [8, 1.5, 8] as [number, number, number], scale: [1.2, 3, 1.2] as [number, number, number] } },
+  { id: 4002, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-8, 1.5, 8] as [number, number, number], scale: [1.2, 3, 1.2] as [number, number, number] } },
+  { id: 4003, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [8, 1.5, -8] as [number, number, number], scale: [1.2, 3, 1.2] as [number, number, number] } },
+  { id: 4004, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-8, 1.5, -8] as [number, number, number], scale: [1.2, 3, 1.2] as [number, number, number] } },
+
+  // ===== LEVEL 1 LEGS (3-12m) =====
+  { id: 4011, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [7, 7.5, 7] as [number, number, number], scale: [0.9, 9, 0.9] as [number, number, number] } },
+  { id: 4012, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-7, 7.5, 7] as [number, number, number], scale: [0.9, 9, 0.9] as [number, number, number] } },
+  { id: 4013, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [7, 7.5, -7] as [number, number, number], scale: [0.9, 9, 0.9] as [number, number, number] } },
+  { id: 4014, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-7, 7.5, -7] as [number, number, number], scale: [0.9, 9, 0.9] as [number, number, number] } },
+
+  // ===== LEVEL 2 LEGS (12-24m) =====
+  { id: 4021, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [5.5, 18, 5.5] as [number, number, number], scale: [0.75, 12, 0.75] as [number, number, number] } },
+  { id: 4022, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-5.5, 18, 5.5] as [number, number, number], scale: [0.75, 12, 0.75] as [number, number, number] } },
+  { id: 4023, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [5.5, 18, -5.5] as [number, number, number], scale: [0.75, 12, 0.75] as [number, number, number] } },
+  { id: 4024, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-5.5, 18, -5.5] as [number, number, number], scale: [0.75, 12, 0.75] as [number, number, number] } },
+
+  // ===== LEVEL 3 LEGS (24-40m) =====
+  { id: 4031, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [3.5, 32, 3.5] as [number, number, number], scale: [0.6, 16, 0.6] as [number, number, number] } },
+  { id: 4032, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-3.5, 32, 3.5] as [number, number, number], scale: [0.6, 16, 0.6] as [number, number, number] } },
+  { id: 4033, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [3.5, 32, -3.5] as [number, number, number], scale: [0.6, 16, 0.6] as [number, number, number] } },
+  { id: 4034, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-3.5, 32, -3.5] as [number, number, number], scale: [0.6, 16, 0.6] as [number, number, number] } },
+
+  // ===== LEVEL 4 LEGS (40-55m) - Narrow top section =====
+  { id: 4041, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [2, 47.5, 2] as [number, number, number], scale: [0.5, 15, 0.5] as [number, number, number] } },
+  { id: 4042, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-2, 47.5, 2] as [number, number, number], scale: [0.5, 15, 0.5] as [number, number, number] } },
+  { id: 4043, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [2, 47.5, -2] as [number, number, number], scale: [0.5, 15, 0.5] as [number, number, number] } },
+  { id: 4044, type: 'COLUMN', geometry: { type: 'cylinder' as const, position: [-2, 47.5, -2] as [number, number, number], scale: [0.5, 15, 0.5] as [number, number, number] } },
+
+  // ===== HORIZONTAL BEAMS - LEVEL 1 (12m) =====
+  { id: 4101, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 12, 7] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 2.8] as [number, number, number] } },
+  { id: 4102, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 12, -7] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 2.8] as [number, number, number] } },
+  { id: 4103, type: 'BEAM', geometry: { type: 'beam' as const, position: [7, 12, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 2.8] as [number, number, number] } },
+  { id: 4104, type: 'BEAM', geometry: { type: 'beam' as const, position: [-7, 12, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.8, 0.8, 2.8] as [number, number, number] } },
+
+  // ===== HORIZONTAL BEAMS - LEVEL 2 (24m) =====
+  { id: 4111, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 24, 5.5] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.7, 0.7, 2.2] as [number, number, number] } },
+  { id: 4112, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 24, -5.5] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.7, 0.7, 2.2] as [number, number, number] } },
+  { id: 4113, type: 'BEAM', geometry: { type: 'beam' as const, position: [5.5, 24, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.7, 0.7, 2.2] as [number, number, number] } },
+  { id: 4114, type: 'BEAM', geometry: { type: 'beam' as const, position: [-5.5, 24, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.7, 0.7, 2.2] as [number, number, number] } },
+
+  // ===== HORIZONTAL BEAMS - LEVEL 3 (40m) =====
+  { id: 4121, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 40, 3.5] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.6, 0.6, 1.4] as [number, number, number] } },
+  { id: 4122, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 40, -3.5] as [number, number, number], rotation: [0, 0, Math.PI / 2] as [number, number, number], scale: [0.6, 0.6, 1.4] as [number, number, number] } },
+  { id: 4123, type: 'BEAM', geometry: { type: 'beam' as const, position: [3.5, 40, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.6, 0.6, 1.4] as [number, number, number] } },
+  { id: 4124, type: 'BEAM', geometry: { type: 'beam' as const, position: [-3.5, 40, 0] as [number, number, number], rotation: [0, Math.PI / 2, Math.PI / 2] as [number, number, number], scale: [0.6, 0.6, 1.4] as [number, number, number] } },
+
+  // ===== DIAGONAL BRACING - LEVEL 1 - NORTH FACE =====
+  { id: 4201, type: 'TRUSS', geometry: { type: 'beam' as const, position: [3.5, 7.5, 7] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.6, 0.6, 1.4] as [number, number, number] } },
+  { id: 4202, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-3.5, 7.5, 7] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.6, 0.6, 1.4] as [number, number, number] } },
+
+  // ===== DIAGONAL BRACING - LEVEL 1 - SOUTH FACE =====
+  { id: 4203, type: 'TRUSS', geometry: { type: 'beam' as const, position: [3.5, 7.5, -7] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.6, 0.6, 1.4] as [number, number, number] } },
+  { id: 4204, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-3.5, 7.5, -7] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.6, 0.6, 1.4] as [number, number, number] } },
+
+  // ===== DIAGONAL BRACING - LEVEL 1 - EAST FACE =====
+  { id: 4205, type: 'TRUSS', geometry: { type: 'beam' as const, position: [7, 7.5, 3.5] as [number, number, number], rotation: [Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.6, 0.6, 1.4] as [number, number, number] } },
+  { id: 4206, type: 'TRUSS', geometry: { type: 'beam' as const, position: [7, 7.5, -3.5] as [number, number, number], rotation: [-Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.6, 0.6, 1.4] as [number, number, number] } },
+
+  // ===== DIAGONAL BRACING - LEVEL 1 - WEST FACE =====
+  { id: 4207, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-7, 7.5, 3.5] as [number, number, number], rotation: [Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.6, 0.6, 1.4] as [number, number, number] } },
+  { id: 4208, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-7, 7.5, -3.5] as [number, number, number], rotation: [-Math.PI / 4, Math.PI / 2, 0] as [number, number, number], scale: [0.6, 0.6, 1.4] as [number, number, number] } },
+
+  // ===== DIAGONAL BRACING - LEVEL 2 - ALL FACES =====
+  { id: 4211, type: 'TRUSS', geometry: { type: 'beam' as const, position: [2.75, 18, 5.5] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.55, 0.55, 1.6] as [number, number, number] } },
+  { id: 4212, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-2.75, 18, 5.5] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.55, 0.55, 1.6] as [number, number, number] } },
+  { id: 4213, type: 'TRUSS', geometry: { type: 'beam' as const, position: [2.75, 18, -5.5] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.55, 0.55, 1.6] as [number, number, number] } },
+  { id: 4214, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-2.75, 18, -5.5] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.55, 0.55, 1.6] as [number, number, number] } },
+
+  // ===== DIAGONAL BRACING - LEVEL 3 - ALL FACES =====
+  { id: 4221, type: 'TRUSS', geometry: { type: 'beam' as const, position: [1.75, 32, 3.5] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.5, 0.5, 1.8] as [number, number, number] } },
+  { id: 4222, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-1.75, 32, 3.5] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.5, 0.5, 1.8] as [number, number, number] } },
+  { id: 4223, type: 'TRUSS', geometry: { type: 'beam' as const, position: [1.75, 32, -3.5] as [number, number, number], rotation: [0, 0, Math.PI / 4] as [number, number, number], scale: [0.5, 0.5, 1.8] as [number, number, number] } },
+  { id: 4224, type: 'TRUSS', geometry: { type: 'beam' as const, position: [-1.75, 32, -3.5] as [number, number, number], rotation: [0, 0, -Math.PI / 4] as [number, number, number], scale: [0.5, 0.5, 1.8] as [number, number, number] } },
+
+  // ===== ANTENNA MOUNTS AT TOP (55m) =====
+  { id: 4301, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 55, 0] as [number, number, number], rotation: [0, 0, 0] as [number, number, number], scale: [0.8, 0.8, 1.6] as [number, number, number] } },
+  { id: 4302, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 55, 0] as [number, number, number], rotation: [0, 0, Math.PI / 3] as [number, number, number], scale: [0.8, 0.8, 1.6] as [number, number, number] } },
+  { id: 4303, type: 'BEAM', geometry: { type: 'beam' as const, position: [0, 55, 0] as [number, number, number], rotation: [0, 0, -Math.PI / 3] as [number, number, number], scale: [0.8, 0.8, 1.6] as [number, number, number] } },
+];
+
 // Export geometry map for easy lookup
 export const modelGeometryMap: Record<string, typeof towerCraneGeometry> = {
   'model-1': towerCraneGeometry,
   'model-2': buildingFrameGeometry,
   'model-3': bridgeDeckGeometry,
+  'model-4': torreTowerGeometry,
 };
 
 // Default export (backward compatibility)
