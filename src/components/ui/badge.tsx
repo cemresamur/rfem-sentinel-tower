@@ -4,14 +4,14 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex items-center rounded-full border-2 px-3 py-1 text-xs font-bold tracking-wider uppercase transition-all focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 font-tech",
   {
     variants: {
       variant: {
-        default: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80 shadow-[0_0_12px_hsl(var(--glow-primary)/0.4)]",
+        default: "border-primary/50 bg-gradient-to-r from-navy to-primary text-primary-foreground shadow-[0_0_15px_hsl(var(--glow-primary)/0.5)] hover:shadow-[0_0_25px_hsl(var(--glow-neon)/0.7)] hover:border-glow-neon",
         secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
-        outline: "text-foreground border-primary/30 shadow-[0_0_8px_hsl(var(--glow-primary)/0.2)]",
+        destructive: "border-destructive/50 bg-gradient-to-r from-red-900 to-destructive text-destructive-foreground shadow-[0_0_15px_rgba(239,68,68,0.5)]",
+        outline: "text-foreground border-primary/40 shadow-[0_0_10px_hsl(var(--glow-primary)/0.3)] hover:border-glow-neon hover:shadow-[0_0_20px_hsl(var(--glow-neon)/0.6)]",
       },
     },
     defaultVariants: {

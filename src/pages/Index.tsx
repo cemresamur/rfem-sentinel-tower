@@ -165,30 +165,30 @@ const Index = () => {
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
-        <header className="border-b bg-card px-6 py-4 tech-panel relative">
+        <header className="border-b bg-card px-6 py-4 tech-panel crisis-border relative">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-foreground tracking-wider">
-                <span className="text-primary glow-primary">RFEM</span> Risk Control Tower
+              <h1 className="text-2xl font-bold text-foreground tracking-wider font-futuristic">
+                <span className="text-primary glow-primary drop-shadow-[0_0_10px_hsl(var(--glow-neon))]">RFEM</span> RISK CONTROL TOWER
               </h1>
-              <p className="text-sm text-muted-foreground">
-                {selectedModel ? selectedModel.name : 'Select a model to begin'}
+              <p className="text-sm text-muted-foreground font-tech tracking-wide uppercase">
+                {selectedModel ? `>> ${selectedModel.name}` : '>> AWAITING MODEL SELECTION'}
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2 hologram-border px-3 py-2 rounded-md">
+              <div className="flex items-center gap-2 crisis-border px-4 py-2 rounded-md bg-background/50 backdrop-blur-sm">
                 <Switch
                   id="demo-mode"
                   checked={demoMode}
                   onCheckedChange={setDemoMode}
                 />
-                <Label htmlFor="demo-mode" className="text-sm">
-                  Demo Mode
+                <Label htmlFor="demo-mode" className="text-sm font-tech font-semibold tracking-wider">
+                  DEMO MODE
                 </Label>
               </div>
               <Button variant="outline" size="sm">
                 <Settings className="h-4 w-4 mr-2" />
-                Settings
+                SETTINGS
               </Button>
             </div>
           </div>
@@ -209,14 +209,14 @@ const Index = () => {
           <Tabs value={selectedTab} onValueChange={setSelectedTab}>
             <div className="flex items-center justify-between mb-6">
               <TabsList>
-                <TabsTrigger value="overview">Overview</TabsTrigger>
-                <TabsTrigger value="3d-viewer">3D Viewer</TabsTrigger>
-                <TabsTrigger value="elements">Elements</TabsTrigger>
-                <TabsTrigger value="reports">Reports</TabsTrigger>
+                <TabsTrigger value="overview" className="font-tech font-semibold tracking-wider">OVERVIEW</TabsTrigger>
+                <TabsTrigger value="3d-viewer" className="font-tech font-semibold tracking-wider">3D VIEWER</TabsTrigger>
+                <TabsTrigger value="elements" className="font-tech font-semibold tracking-wider">ELEMENTS</TabsTrigger>
+                <TabsTrigger value="reports" className="font-tech font-semibold tracking-wider">REPORTS</TabsTrigger>
               </TabsList>
-              <Button variant="outline" size="sm" onClick={() => setUploadDialogOpen(true)}>
+              <Button variant="outline" size="sm" onClick={() => setUploadDialogOpen(true)} className="font-tech font-semibold">
                 <Upload className="h-4 w-4 mr-2" />
-                Upload CAD
+                UPLOAD CAD
               </Button>
             </div>
 
@@ -227,22 +227,22 @@ const Index = () => {
                   onClick={runAnalysis}
                   disabled={isRunning || !selectedModel}
                   size="lg"
-                  className="min-w-40"
+                  className="min-w-40 font-futuristic text-sm crisis-border"
                 >
                   {isRunning ? (
-                    <>Processing...</>
+                    <>PROCESSING...</>
                   ) : (
                     <>
                       <Play className="h-4 w-4 mr-2" />
-                      Run Analysis
+                      RUN ANALYSIS
                     </>
                   )}
                 </Button>
                 {isRunning && (
                   <div className="flex-1 max-w-md">
                     <Progress value={progress} className="h-2" />
-                    <p className="text-sm text-muted-foreground mt-1">
-                      {progress.toFixed(0)}% complete
+                    <p className="text-sm text-muted-foreground mt-1 font-tech font-semibold tracking-wider">
+                      {progress.toFixed(0)}% COMPLETE - SYSTEM ACTIVE
                     </p>
                   </div>
                 )}
