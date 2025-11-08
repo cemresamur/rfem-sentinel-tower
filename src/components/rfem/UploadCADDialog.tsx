@@ -23,11 +23,11 @@ export function UploadCADDialog({ open, onOpenChange, onUpload }: UploadCADDialo
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const acceptedFormats = '.dwg,.dxf,.ifc,.rf6';
+  const acceptedFormats = '.dwg,.dxf,.ifc,.rf6,.rvt,.nwd,.nwc,.dgn,.skp';
 
   const handleFileSelect = (file: File) => {
     const extension = file.name.toLowerCase().split('.').pop();
-    const validExtensions = ['dwg', 'dxf', 'ifc', 'rf6'];
+    const validExtensions = ['dwg', 'dxf', 'ifc', 'rf6', 'rvt', 'nwd', 'nwc', 'dgn', 'skp'];
 
     if (!extension || !validExtensions.includes(extension)) {
       toast({
@@ -67,9 +67,9 @@ export function UploadCADDialog({ open, onOpenChange, onUpload }: UploadCADDialo
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle>Upload CAD Model</DialogTitle>
+          <DialogTitle>Upload BIM/CAD Model</DialogTitle>
           <DialogDescription>
-            Upload AutoCAD (.dwg, .dxf), IFC, or RFEM (.rf6) files for analysis
+            Upload BIM (.ifc, .rvt, .nwd, .nwc, .dgn, .skp), AutoCAD (.dwg, .dxf), or RFEM (.rf6) files for analysis
           </DialogDescription>
         </DialogHeader>
 
