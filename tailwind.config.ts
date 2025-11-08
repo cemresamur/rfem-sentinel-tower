@@ -80,6 +80,7 @@ export default {
           grid: "hsl(var(--tech-grid))",
           surface: "hsl(var(--surface-elevated))",
         },
+        navy: "hsl(var(--navy))",
       },
       borderRadius: {
         lg: "var(--radius)",

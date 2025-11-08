@@ -65,6 +65,7 @@ All colors MUST be HSL.
     --glow-secondary: 210 100% 65%;
     --tech-grid: 195 50% 30%;
     --surface-elevated: 210 20% 99%;
+    --navy: 220 100% 20%;
   }
 
   .dark {
@@ -122,6 +123,7 @@ All colors MUST be HSL.
     --glow-secondary: 210 100% 70%;
     --tech-grid: 195 80% 25%;
     --surface-elevated: 210 25% 13%;
+    --navy: 220 100% 25%;
   }
 }
 
