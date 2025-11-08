@@ -262,43 +262,114 @@ export const mockAnalysisResultsByModel: Record<string, AnalysisResult> = {
     },
     exceedances: [],
     heatmap: [
-      { element_id: 101, util: 0.82 },
-      { element_id: 102, util: 0.89 },
-      { element_id: 103, util: 0.76 },
-      { element_id: 104, util: 0.78 },
-      { element_id: 105, util: 0.94 },
-      { element_id: 106, util: 0.71 },
-      { element_id: 107, util: 0.73 },
-      { element_id: 108, util: 0.85 },
-      { element_id: 109, util: 0.68 },
-      { element_id: 110, util: 0.77 },
-      { element_id: 111, util: 0.81 },
-      { element_id: 112, util: 0.74 },
-      { element_id: 201, util: 0.68 },
-      { element_id: 202, util: 0.75 },
-      { element_id: 203, util: 0.64 },
-      { element_id: 204, util: 0.71 },
-      { element_id: 205, util: 0.69 },
-      { element_id: 206, util: 0.66 },
-      { element_id: 301, util: 0.58 },
-      { element_id: 302, util: 0.61 },
-      { element_id: 303, util: 0.55 },
-      { element_id: 401, util: 0.85 },
-      { element_id: 402, util: 0.88 },
-      { element_id: 403, util: 0.79 },
-      { element_id: 404, util: 0.81 },
-      { element_id: 405, util: 0.76 },
-      { element_id: 406, util: 0.83 },
-      { element_id: 501, util: 0.72 },
-      { element_id: 502, util: 0.68 },
-      { element_id: 503, util: 0.74 },
-      { element_id: 601, util: 0.58 },
-      { element_id: 602, util: 0.62 },
-      { element_id: 801, util: 0.54 },
-      { element_id: 802, util: 0.51 },
-      { element_id: 803, util: 0.56 },
-      { element_id: 811, util: 0.48 },
-      { element_id: 812, util: 0.45 },
+      // Foundation columns (101-136)
+      { element_id: 101, util: 0.82 }, { element_id: 102, util: 0.89 }, { element_id: 103, util: 0.76 }, { element_id: 104, util: 0.78 },
+      { element_id: 105, util: 0.94 }, { element_id: 106, util: 0.71 }, { element_id: 107, util: 0.73 }, { element_id: 108, util: 0.85 },
+      { element_id: 109, util: 0.68 }, { element_id: 110, util: 0.77 }, { element_id: 111, util: 0.81 }, { element_id: 112, util: 0.74 },
+      { element_id: 113, util: 0.79 }, { element_id: 114, util: 0.86 }, { element_id: 115, util: 0.72 }, { element_id: 116, util: 0.75 },
+      { element_id: 117, util: 0.81 }, { element_id: 118, util: 0.78 }, { element_id: 119, util: 0.76 }, { element_id: 120, util: 0.83 },
+      { element_id: 121, util: 0.69 }, { element_id: 122, util: 0.74 }, { element_id: 123, util: 0.80 }, { element_id: 124, util: 0.77 },
+      { element_id: 125, util: 0.84 }, { element_id: 126, util: 0.71 }, { element_id: 127, util: 0.76 }, { element_id: 128, util: 0.82 },
+      { element_id: 129, util: 0.73 }, { element_id: 130, util: 0.78 }, { element_id: 131, util: 0.75 }, { element_id: 132, util: 0.81 },
+      { element_id: 133, util: 0.68 }, { element_id: 134, util: 0.72 }, { element_id: 135, util: 0.79 }, { element_id: 136, util: 0.74 },
+      
+      // Perimeter columns floors 2-4 (201-220)
+      { element_id: 201, util: 0.68 }, { element_id: 202, util: 0.75 }, { element_id: 203, util: 0.64 }, { element_id: 204, util: 0.71 },
+      { element_id: 205, util: 0.69 }, { element_id: 206, util: 0.66 }, { element_id: 207, util: 0.72 }, { element_id: 208, util: 0.67 },
+      { element_id: 209, util: 0.73 }, { element_id: 210, util: 0.70 }, { element_id: 211, util: 0.68 }, { element_id: 212, util: 0.74 },
+      { element_id: 213, util: 0.65 }, { element_id: 214, util: 0.71 }, { element_id: 215, util: 0.67 }, { element_id: 216, util: 0.69 },
+      { element_id: 217, util: 0.72 }, { element_id: 218, util: 0.68 }, { element_id: 219, util: 0.66 }, { element_id: 220, util: 0.70 },
+      
+      // Core columns (221-240)
+      { element_id: 221, util: 0.78 }, { element_id: 222, util: 0.81 }, { element_id: 223, util: 0.76 }, { element_id: 224, util: 0.79 },
+      { element_id: 225, util: 0.74 }, { element_id: 226, util: 0.77 }, { element_id: 227, util: 0.73 }, { element_id: 228, util: 0.75 },
+      { element_id: 229, util: 0.71 }, { element_id: 230, util: 0.74 }, { element_id: 231, util: 0.69 }, { element_id: 232, util: 0.72 },
+      { element_id: 233, util: 0.68 }, { element_id: 234, util: 0.70 }, { element_id: 235, util: 0.66 }, { element_id: 236, util: 0.69 },
+      { element_id: 237, util: 0.64 }, { element_id: 238, util: 0.67 }, { element_id: 239, util: 0.63 }, { element_id: 240, util: 0.65 },
+      
+      // Perimeter columns floors 5-8 (301-312)
+      { element_id: 301, util: 0.58 }, { element_id: 302, util: 0.61 }, { element_id: 303, util: 0.55 }, { element_id: 304, util: 0.59 },
+      { element_id: 305, util: 0.57 }, { element_id: 306, util: 0.60 }, { element_id: 307, util: 0.56 }, { element_id: 308, util: 0.58 },
+      { element_id: 309, util: 0.54 }, { element_id: 310, util: 0.57 }, { element_id: 311, util: 0.59 }, { element_id: 312, util: 0.56 },
+      
+      // Perimeter columns floors 5-8 continued (351-356)
+      { element_id: 351, util: 0.52 }, { element_id: 352, util: 0.55 }, { element_id: 353, util: 0.51 }, { element_id: 354, util: 0.54 },
+      { element_id: 355, util: 0.53 }, { element_id: 356, util: 0.56 },
+      
+      // Perimeter columns floors 9-12 (361-374)
+      { element_id: 361, util: 0.48 }, { element_id: 362, util: 0.51 }, { element_id: 363, util: 0.47 }, { element_id: 364, util: 0.50 },
+      { element_id: 365, util: 0.49 }, { element_id: 366, util: 0.52 }, { element_id: 367, util: 0.48 }, { element_id: 368, util: 0.51 },
+      { element_id: 371, util: 0.46 }, { element_id: 372, util: 0.49 }, { element_id: 373, util: 0.45 }, { element_id: 374, util: 0.48 },
+      
+      // Perimeter columns floors 13-15 (381-394)
+      { element_id: 381, util: 0.42 }, { element_id: 382, util: 0.45 }, { element_id: 383, util: 0.41 }, { element_id: 384, util: 0.44 },
+      { element_id: 385, util: 0.43 }, { element_id: 386, util: 0.46 }, { element_id: 387, util: 0.42 }, { element_id: 388, util: 0.45 },
+      { element_id: 391, util: 0.39 }, { element_id: 392, util: 0.42 }, { element_id: 393, util: 0.38 }, { element_id: 394, util: 0.41 },
+      
+      // Floor beams level 1 (401-418)
+      { element_id: 401, util: 0.85 }, { element_id: 402, util: 0.88 }, { element_id: 403, util: 0.79 }, { element_id: 404, util: 0.81 },
+      { element_id: 405, util: 0.76 }, { element_id: 406, util: 0.83 }, { element_id: 407, util: 0.84 }, { element_id: 408, util: 0.80 },
+      { element_id: 409, util: 0.82 }, { element_id: 410, util: 0.77 }, { element_id: 411, util: 0.86 }, { element_id: 412, util: 0.81 },
+      { element_id: 413, util: 0.78 }, { element_id: 414, util: 0.83 }, { element_id: 415, util: 0.79 }, { element_id: 416, util: 0.85 },
+      { element_id: 417, util: 0.80 }, { element_id: 418, util: 0.82 },
+      
+      // Floor beams level 2 (501-511)
+      { element_id: 501, util: 0.72 }, { element_id: 502, util: 0.68 }, { element_id: 503, util: 0.74 }, { element_id: 504, util: 0.70 },
+      { element_id: 505, util: 0.73 }, { element_id: 506, util: 0.69 }, { element_id: 507, util: 0.71 }, { element_id: 508, util: 0.67 },
+      { element_id: 509, util: 0.72 }, { element_id: 510, util: 0.68 }, { element_id: 511, util: 0.70 },
+      
+      // Floor beams level 3 (601-607)
+      { element_id: 601, util: 0.58 }, { element_id: 602, util: 0.62 }, { element_id: 603, util: 0.60 }, { element_id: 604, util: 0.56 },
+      { element_id: 605, util: 0.59 }, { element_id: 606, util: 0.61 }, { element_id: 607, util: 0.57 },
+      
+      // Floor beams level 4 (701-707)
+      { element_id: 701, util: 0.54 }, { element_id: 702, util: 0.58 }, { element_id: 703, util: 0.56 }, { element_id: 704, util: 0.52 },
+      { element_id: 705, util: 0.55 }, { element_id: 706, util: 0.53 }, { element_id: 707, util: 0.57 },
+      
+      // Floor beams levels 5-7 (711-717)
+      { element_id: 711, util: 0.51 }, { element_id: 712, util: 0.54 }, { element_id: 713, util: 0.50 }, { element_id: 714, util: 0.52 },
+      { element_id: 715, util: 0.53 }, { element_id: 716, util: 0.49 }, { element_id: 717, util: 0.51 },
+      
+      // Floor beams levels 8-10 (721-727)
+      { element_id: 721, util: 0.47 }, { element_id: 722, util: 0.50 }, { element_id: 723, util: 0.48 }, { element_id: 724, util: 0.46 },
+      { element_id: 725, util: 0.49 }, { element_id: 726, util: 0.47 }, { element_id: 727, util: 0.48 },
+      
+      // Floor beams levels 11-13 (731-734)
+      { element_id: 731, util: 0.43 }, { element_id: 732, util: 0.46 }, { element_id: 733, util: 0.44 }, { element_id: 734, util: 0.45 },
+      
+      // Outrigger beams (741-744)
+      { element_id: 741, util: 0.88 }, { element_id: 742, util: 0.86 }, { element_id: 743, util: 0.89 }, { element_id: 744, util: 0.87 },
+      
+      // Transfer girders (751-754)
+      { element_id: 751, util: 0.92 }, { element_id: 752, util: 0.90 }, { element_id: 753, util: 0.93 }, { element_id: 754, util: 0.91 },
+      
+      // Diagonal bracing floors 2-4 (801-813)
+      { element_id: 801, util: 0.54 }, { element_id: 802, util: 0.51 }, { element_id: 803, util: 0.56 }, { element_id: 804, util: 0.52 },
+      { element_id: 805, util: 0.55 }, { element_id: 806, util: 0.53 }, { element_id: 807, util: 0.50 }, { element_id: 808, util: 0.54 },
+      { element_id: 809, util: 0.51 }, { element_id: 810, util: 0.52 }, { element_id: 811, util: 0.48 }, { element_id: 812, util: 0.45 },
+      { element_id: 813, util: 0.49 },
+      
+      // Diagonal bracing floors 5-7 (814-824)
+      { element_id: 814, util: 0.47 }, { element_id: 815, util: 0.50 }, { element_id: 816, util: 0.48 }, { element_id: 817, util: 0.46 },
+      { element_id: 818, util: 0.49 }, { element_id: 823, util: 0.47 }, { element_id: 824, util: 0.48 },
+      
+      // Diagonal bracing floors 8-10 (819-826)
+      { element_id: 819, util: 0.44 }, { element_id: 820, util: 0.47 }, { element_id: 821, util: 0.45 }, { element_id: 822, util: 0.43 },
+      { element_id: 825, util: 0.46 }, { element_id: 826, util: 0.44 },
+      
+      // Diagonal bracing floors 11-13 (827-830)
+      { element_id: 827, util: 0.41 }, { element_id: 828, util: 0.44 }, { element_id: 829, util: 0.42 }, { element_id: 830, util: 0.40 },
+      
+      // Diagonal bracing floors 14-16 (831-834)
+      { element_id: 831, util: 0.38 }, { element_id: 832, util: 0.41 }, { element_id: 833, util: 0.39 }, { element_id: 834, util: 0.37 },
+      
+      // X-bracing core (841-848)
+      { element_id: 841, util: 0.65 }, { element_id: 842, util: 0.68 }, { element_id: 843, util: 0.66 }, { element_id: 844, util: 0.67 },
+      { element_id: 845, util: 0.63 }, { element_id: 846, util: 0.66 }, { element_id: 847, util: 0.64 }, { element_id: 848, util: 0.65 },
+      
+      // Secondary beams (851-858)
+      { element_id: 851, util: 0.58 }, { element_id: 852, util: 0.61 }, { element_id: 853, util: 0.59 }, { element_id: 854, util: 0.57 },
+      { element_id: 855, util: 0.60 }, { element_id: 856, util: 0.58 }, { element_id: 857, util: 0.56 }, { element_id: 858, util: 0.59 },
     ],
     report_url: 'https://rfem-backend.example.com/reports/building-frame.pdf',
   },
