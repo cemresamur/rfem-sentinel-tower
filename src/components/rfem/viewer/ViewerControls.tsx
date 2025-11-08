@@ -27,11 +27,11 @@ export function ViewerControls() {
         <div className="mt-4 pt-4 border-t">
           <p className="font-medium mb-2 text-sm">Heatmap Legend</p>
           <div className="flex flex-wrap gap-2">
-            <Badge className="bg-risk-critical text-white">Critical ≥95%</Badge>
-            <Badge className="bg-risk-high text-white">High ≥85%</Badge>
-            <Badge className="bg-risk-medium text-white">Medium ≥70%</Badge>
-            <Badge className="bg-risk-low text-white">Low ≥50%</Badge>
-            <Badge className="bg-risk-safe text-white">Safe &lt;50%</Badge>
+            <Badge className="bg-risk-critical text-white shadow-[0_0_16px_hsl(var(--risk-critical)/0.6)]">Critical ≥95%</Badge>
+            <Badge className="bg-risk-high text-white shadow-[0_0_16px_hsl(var(--risk-high)/0.6)]">High ≥85%</Badge>
+            <Badge className="bg-risk-medium text-white shadow-[0_0_16px_hsl(var(--risk-medium)/0.6)]">Medium ≥70%</Badge>
+            <Badge className="bg-risk-low text-white shadow-[0_0_14px_hsl(var(--risk-low)/0.5)]">Low ≥50%</Badge>
+            <Badge className="bg-risk-safe text-white shadow-[0_0_14px_hsl(var(--risk-safe)/0.5)]">Safe &lt;50%</Badge>
           </div>
         </div>
       </CardContent>

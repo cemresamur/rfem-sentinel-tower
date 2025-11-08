@@ -165,16 +165,18 @@ const Index = () => {
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
-        <header className="border-b bg-card px-6 py-4">
+        <header className="border-b bg-card px-6 py-4 tech-panel relative">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-foreground">RFEM Risk Control Tower</h1>
+              <h1 className="text-2xl font-bold text-foreground tracking-wider">
+                <span className="text-primary glow-primary">RFEM</span> Risk Control Tower
+              </h1>
               <p className="text-sm text-muted-foreground">
                 {selectedModel ? selectedModel.name : 'Select a model to begin'}
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 hologram-border px-3 py-2 rounded-md">
                 <Switch
                   id="demo-mode"
                   checked={demoMode}
