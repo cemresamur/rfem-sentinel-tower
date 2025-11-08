@@ -19,8 +19,8 @@ import { Scene3D } from '@/components/rfem/viewer/Scene3D';
 import { ViewerControls } from '@/components/rfem/viewer/ViewerControls';
 import { Model, MemberLoad, Thresholds, AnalysisResult, ElementWithMetrics } from '@/types/rfem';
 import { DEFAULT_CONFIG } from '@/config/api';
-import { mockModels, mockElements, mockAnalysisResult, generateMockProgress } from '@/lib/mockData';
-import { mock3DElements } from '@/lib/mockGeometry';
+import { mockModels, mockElementsByModel, mockAnalysisResultsByModel, generateMockProgress } from '@/lib/mockData';
+import { modelGeometryMap } from '@/lib/mockGeometry';
 
 const Index = () => {
   const { toast } = useToast();
@@ -41,6 +41,15 @@ const Index = () => {
   const [selectedTab, setSelectedTab] = useState('overview');
 
   const models = demoMode ? mockModels : [];
+  
+  // Get model-specific data
+  const currentElements = selectedModel?.id && mockElementsByModel[selectedModel.id] 
+    ? mockElementsByModel[selectedModel.id] 
+    : mockElementsByModel['model-1'];
+  
+  const current3DGeometry = selectedModel?.id && modelGeometryMap[selectedModel.id]
+    ? modelGeometryMap[selectedModel.id]
+    : modelGeometryMap['model-1'];
 
   const runAnalysis = async () => {
     if (!selectedModel) {
@@ -65,10 +74,16 @@ const Index = () => {
         setProgress(steps[i].progress * 100);
         setCurrentStep(i);
       }
-      setAnalysisResult(mockAnalysisResult);
+      
+      // Get model-specific result
+      const modelResult = selectedModel?.id && mockAnalysisResultsByModel[selectedModel.id]
+        ? mockAnalysisResultsByModel[selectedModel.id]
+        : mockAnalysisResultsByModel['model-1'];
+      
+      setAnalysisResult(modelResult);
       toast({
         title: 'Analysis Complete',
-        description: `Found ${mockAnalysisResult.summary?.exceed_count} exceedances`,
+        description: `Found ${modelResult.summary?.exceed_count} exceedances`,
       });
     }
 
@@ -112,7 +127,7 @@ const Index = () => {
     }, 2000);
   };
 
-  const enrichedElements: ElementWithMetrics[] = mockElements.map((element) => {
+  const enrichedElements: ElementWithMetrics[] = currentElements.map((element) => {
     const exceedance = analysisResult?.exceedances?.find((exc) => exc.element_id === element.id);
     const heatmapData = analysisResult?.heatmap?.find((h) => h.element_id === element.id);
 
@@ -253,7 +268,7 @@ const Index = () => {
             <TabsContent value="3d-viewer">
               <ViewerControls />
               {analysisResult && analysisResult.heatmap ? (
-                <Scene3D heatmap={analysisResult.heatmap} elements={mock3DElements} />
+                <Scene3D heatmap={analysisResult.heatmap} elements={current3DGeometry} />
               ) : (
                 <div className="text-center py-16 text-muted-foreground">
                   <Upload className="h-16 w-16 mx-auto mb-4 opacity-50" />
